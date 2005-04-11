@@ -2,12 +2,14 @@
 \documentclass{article}
 \usepackage{miniDBV,amsthm}
 \usepackage[a4paper, landscape, margin=5mm]{geometry}
-\usepackage{multicol,array,tabularx}
+\usepackage{multicol,tabularx}
+\renewcommand{\familydefault}{cmss}
 \begin{document}
 
 \newtheorem{convention}{}
 \newcommand{\Ref}[1]{$^{\ref{#1}}$}
 
+\hspace{2.6mm}
 \beginMinikarteNeu
 	%{\large Christoph Berg}{\large Frank Luithle}
 	{}{}
@@ -36,11 +38,14 @@
 %
 \ZweiTreffBed{Weak Two in \karo\ (6-10F) oder}
 	{Benjamin: bel. Semiforcing mit 6er-Farbe / 8 Spielstichen (16+F), \SA\ 22-23F, \SA\ 26-27F}
+	%
 \ZweiTreffAnt{2\karo: Relais, 2\SA: Ogust\Ref{ogust} für \karo-Weak Two}
 \ZweiKaroBed{Weak Two in \coeur\ (6-10F) oder}
 	{Benjamin: bel. Partieforcing mit 6er-Farbe / 9 Spielstichen (18+F), \SA\ 24-25F, \SA\ 28+F}
+	%
 \ZweiKaroAnt{2\coeur: Relais, 2\SA: Ogust\Ref{ogust} für \coeur-Weak Two}
-\ZweiCoeurBed{Zweifärber mit \coeur\ (6-10F, 5-5+ \coeur/?, in 3. Hand auch 5-4)}
+\ZweiCoeurBed
+	{Zweifärber mit \coeur\ (6-10F, 5-5+ \coeur/?, in 3. Hand auch 5-4)}
 	{}
 \ZweiCoeurAnt{2\pik: zum spielen oder ausbessern, 2\SA: Frage nach 2. Farbe/Stärke\Ref{zweifaerber}}
 \ZweiPikBed{Weak Two in \pik\ (6-10F)}
@@ -69,9 +74,9 @@
 	\UF\ $\rightarrow$ 2\karo: \OF, 2\SA: aUF+\coeur;
 	\OF\ $\rightarrow$ Überruf: \treff+aOF, 2\SA: \UF, 3\treff: \karo+aOF}
 %
-\GegenEinSA{Multi-Landy: X: 5-4+ in UF-OF, 2\treff: 5-4+ \OF, 2\karo: OF-Einfärber,
-	2\OF: 5-4+ \OF-UF,}
-	{\hphantom{Multi-Landy:} 2\SA: 5-5+ in \UF, 3\UF: UF-Einfärber}
+\GegenEinSA{Multi-Landy: X: 5-4+ in UF-OF, 2\treff: 5-4+ \OF\ (2\karo: gleiche Länge in \OF),
+	2\karo: OF-Einfärber,}
+	{\hphantom{Multi-Landy:} 2\OF: 5-4+ \OF-UF, 2\SA: 5-5+ in \UF, 3\UF: UF-Einfärber}
 	{gegen schwachen \SA: X: mind. gleiche Stärke}
 \AndereGegenreizungen
 	{gegen starke \treff: Crash;
@@ -119,12 +124,12 @@
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
 1\treff & 1\karo & 6-7F & (1) ausgegl. ohne 4er \OF \\
-        &        &      & \hphantom{(1)} (3er \karo\ möglich) \\
+        &        &      & \hspace{1em} (3er \karo\ möglich) \\
      &      & 6+F & (2) \karo-Einfärber \\
      &      & 12+F & (3) 5-4+ in \karo/OF \\
 1\OF &      &      & 5-4+ \treff/OF \\
-1\SA &      & 12-14F & ausgeglichen, 4er \OF\ möglich \\
-     & 2\treff & & UF-Schlemmint., Vert.-Frage (2) \\
+1\SA &      & 12-14F & ausgegl., 4er \OF\ möglich \\
+     & 2\treff & & UF-Schlemmint., Vertfr. (2) \\
      & 2\karo & 6-9F & zum spielen (1/2) \\
      & 2\OF & & Partieforcing (3) \\
      & 2\SA & 8-9F & natürlich (2) \\
@@ -152,7 +157,7 @@ Weiterreizung nach Verteilungsfrage:
 \end{convention}
 
 \begin{convention}[Checkback-Stayman] \label{checkback}
-Antwortender zeigt 5er OF und mind.
+Antw. zeigt 5er OF und mind.
 einl. Hand bei 1\SA-Rückg. des Eröffners (aOF = andere OF).
 
 \begin{tabularx}{\columnwidth}{|lllX|}
@@ -226,18 +231,18 @@ sonst. &    & 14-15+F & zeigt Werte \\
 \hline
 \end{tabularx}
 
-Eröffner reizt mit 4er-Anschluss und Maximum sein Double (2\SA=Trsffarbe/4333),
+Eröffner reizt mit 4er-Anschluss und Maximum Double (2\SA: Transferfarbe/4333),
 mit 4er-Anschl. und Minimum 3 in Farbe.
 \end{convention}
 
 \begin{convention}[Ogust] \label{ogust}
-Auch nach schwachen Sprüngen in 2er Stufe.
+Auch nach schw. Sprüngen in 2er Stufe.
 Nächste freie Farbe ist Kürzenfrage. \emph{Danach} 4\treff\
 (notfalls höher) PKCA\Ref{pkca}.
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
-2?      & 2\SA &       & Frage nach Qualität \\
+2\karo-\pik & 2\SA &       & Frage nach Qualität \\
 3\treff &      & 6-8F  & schlechte Farbe \\
 3\karo  &      & 6-8F  & gute Farbe (2 Topfiguren) \\
 3\coeur &      & 9-10F & schlechte Farbe \\
@@ -250,12 +255,12 @@ Nächste freie Farbe ist Kürzenfrage. \emph{Danach} 4\treff\
 
 \begin{convention}[Zweifärber] \label{zweifaerber}
 
-Danach ist die nächste freie Farbe Kürzenfrage, 4\pik\ PKCA\Ref{pkca} auf
+Danach ist nächste freie Farbe Kürzenfrage, 4\pik\ PKCA\Ref{pkca} auf
 \coeur-Basis und 4\UF\ PKCA\Ref{pkca} (falls möglich) auf \UF-Basis.
 
 \begin{tabularx}{\columnwidth}{|lllllX|}
 \hline
-2\coeur & 2\SA & &       & Frage nach 2. Farbe/Stärke & \\
+2\coeur & 2\SA & &       & Frage 2. Farbe/Stärke & \\
 3\treff &      & & 6-10F & 5-5 \coeur/\treff & \\
 	& 3\karo &  &       & Frage & \\
 	& & 3\coeur & 6-8F & & \\
@@ -302,8 +307,8 @@ Rollend:
 \hline
 \end{tabularx}
 
-Die Annahme eines Transfers zeigt ein Double, 3\SA\ zeigt einen 3er Anschluss.
-Alle anderen Gebote zeigen gute 3/4er Anschlüsse und sind Cuebids.
+Transfer-Annahme zeigt ein Double, 3\SA\ einen 3er Anschluss.
+Andere Gebote zeigen gute 3/4er Anschlüsse und sind Cuebids.
 \end{convention}
 
 \begin{convention}[Gambling] \label{gambling} ~
@@ -337,9 +342,11 @@ $\circ$ Josephine: 5\SA\ im Sprung fragt Topfiguren (0/1/2/3)
 \hline
 1\karo  & 2\treff & & \\
 2\karo  &         & 12-13F & ausgegl. oder natürlich \\
-2\SA    &         & 13F & ausgegl. \\
+2\SA    &         & 14F & ausgegl. \\
 \hline
 \end{tabularx}
+
+Weiterreizung wie nach Inverted.
 \end{convention}
 
 \end{multicols*}
