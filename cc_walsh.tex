@@ -4,17 +4,21 @@
 \usepackage[a4paper, landscape, margin=5mm]{geometry}
 \usepackage{multicol,tabularx}
 \renewcommand{\familydefault}{cmss}
-\begin{document}
 
-\newtheorem{convention}{}
+%\newtheorem{convention}{}
+\newcounter{conv}
+\setcounter{conv}{0}
+\newenvironment{convention}[2]{{\bf \refstepcounter{conv}\label{#2}\theconv\ #1.}}{}
 \newcommand{\Ref}[1]{$^{\ref{#1}}$}
+
+\begin{document}
 
 \hspace{2.6mm}
 \beginMinikarteNeu
-	%{\large Christoph Berg}{\large Frank Luithle}
-	{}{}
+	{\large Christoph Berg}{\large Frank Luithle}
+	%{}{}
 %
-\Grundsystem{\large 5er Oberfarben (Walsh, Inverted, Stenberg, Bergen)}
+\Grundsystem{{\large 5er Oberfarben} (Walsh, Inverted, Stenberg, Bergen)}
 \EinSA{\large15-17F}{\large15-17F}
 %\EinSAkleinesSingle
 %\EinSATopSingle
@@ -119,7 +123,7 @@
 
 \section*{Konventionen zum System}
 
-\begin{convention}[Walsh] \label{walsh} ~
+\begin{convention}{Walsh}{walsh} ~
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
@@ -156,7 +160,7 @@ Weiterreizung nach Verteilungsfrage:
 \end{tabularx}
 \end{convention}
 
-\begin{convention}[Checkback-Stayman] \label{checkback}
+\begin{convention}{Checkback-Stayman}{checkback}
 Antw. zeigt 5er OF und mind.
 einl. Hand bei 1\SA-Rückg. des Eröffners (aOF = andere OF).
 
@@ -174,7 +178,7 @@ einl. Hand bei 1\SA-Rückg. des Eröffners (aOF = andere OF).
 \end{tabularx}
 \end{convention}
 
-\begin{convention}[Inverted Minors] \label{inverted} ~
+\begin{convention}{Inverted Minors}{inverted} ~
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
@@ -191,7 +195,7 @@ sonst. &    & 14-15+F & zeigt Werte \\
 \vfill
 \columnbreak
 
-\begin{convention}[Stenberg] \label{stenberg} ~
+\begin{convention}{Stenberg}{stenberg} ~
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
@@ -207,7 +211,7 @@ sonst. &    & 14-15+F & zeigt Werte \\
 \end{tabularx}
 \end{convention}
 
-\begin{convention}[Bergen] \label{bergen} ~
+\begin{convention}{Bergen}{bergen} ~
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
@@ -219,7 +223,7 @@ sonst. &    & 14-15+F & zeigt Werte \\
 \end{tabularx}
 \end{convention}
 
-\begin{convention}[Jacoby-Transfer] \label{transfer} ~
+\begin{convention}{Jacoby-Transfer}{transfer} ~
 
 \begin{tabularx}{\columnwidth}{|llllX|}
 \hline
@@ -235,7 +239,7 @@ Eröffner reizt mit 4er-Anschluss und Maximum Double (2\SA: Transferfarbe/4333),
 mit 4er-Anschl. und Minimum 3 in Farbe.
 \end{convention}
 
-\begin{convention}[Ogust] \label{ogust}
+\begin{convention}{Ogust}{ogust}
 Auch nach schw. Sprüngen in 2er Stufe.
 Nächste freie Farbe ist Kürzenfrage. \emph{Danach} 4\treff\
 (notfalls höher) PKCA\Ref{pkca}.
@@ -253,8 +257,7 @@ Nächste freie Farbe ist Kürzenfrage. \emph{Danach} 4\treff\
 
 \end{convention}
 
-\begin{convention}[Zweifärber] \label{zweifaerber}
-
+\begin{convention}{Zweifärber}{zweifaerber}
 Danach ist nächste freie Farbe Kürzenfrage, 4\pik\ PKCA\Ref{pkca} auf
 \coeur-Basis und 4\UF\ PKCA\Ref{pkca} (falls möglich) auf \UF-Basis.
 
@@ -274,10 +277,10 @@ Danach ist nächste freie Farbe Kürzenfrage, 4\pik\ PKCA\Ref{pkca} auf
 \end{tabularx}
 \end{convention}
 
-\vfill
-\columnbreak
+%\vfill
+%\columnbreak
 
-\begin{convention}[Preempt Key Card Ask (PKCA)] \label{pkca}
+\begin{convention}{Preempt Key Card Ask (PKCA)}{pkca}
 
 Nach allen schwachen Eröffungen und Sprüngen, meist mit 4\treff\ gestellt.
 Rollend:
@@ -293,7 +296,7 @@ Rollend:
 \end{tabularx}
 \end{convention}
 
-\begin{convention}[Puppet-Stayman] \label{puppet} ~
+\begin{convention}{Puppet-Stayman}{puppet} ~
 
 \begin{tabularx}{\columnwidth}{|llX|}
 \hline
@@ -311,7 +314,7 @@ Transfer-Annahme zeigt ein Double, 3\SA\ einen 3er Anschluss.
 Andere Gebote zeigen gute 3/4er Anschlüsse und sind Cuebids.
 \end{convention}
 
-\begin{convention}[Gambling] \label{gambling} ~
+\begin{convention}{Gambling}{gambling} ~
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
@@ -327,7 +330,7 @@ Andere Gebote zeigen gute 3/4er Anschlüsse und sind Cuebids.
 \end{tabularx}
 \end{convention}
 
-\begin{convention}[Schlemmkonventionen] \label{schlemm}
+\begin{convention}{Schlemmkonventionen}{schlemm}
 $\circ$ DOPI-ROPI \\
 $\circ$ Mixed Cuebids, erstes 5er Gebot zeigt Erstrundenkontrolle \\
 $\circ$ Roman Key Card 14/30, danach rollend nach Trumpfdame und platzierten
@@ -336,7 +339,7 @@ $\circ$ Exclusion Key Card: ungewöhnlicher Sprung meist in 5er Stufe \\
 $\circ$ Josephine: 5\SA\ im Sprung fragt Topfiguren (0/1/2/3)
 \end{convention}
 
-\begin{convention}[Sonstiges] \label{sonstiges} ~
+\begin{convention}{Sonstiges}{sonstiges} ~
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
