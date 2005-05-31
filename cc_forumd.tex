@@ -1,0 +1,132 @@
+%    \begin{macrocode}
+\documentclass{article}
+\usepackage{miniDBV,amsthm}
+\usepackage[a4paper, landscape, margin=5mm]{geometry}
+\usepackage{multicol,tabularx}
+\renewcommand{\familydefault}{cmss}
+\begin{document}
+
+\newtheorem{convention}{}
+\newcommand{\Ref}[1]{$^{\ref{#1}}$}
+
+\hspace{2.6mm}
+\beginMinikarteNeu
+	%{\large Christoph Berg}{\large Frank Luithle}
+	{\large Alexandra Wipper}{\large Christoph Berg}
+	%{}{}
+%
+\Grundsystem{\large 5er Oberfarben (Forum D)}
+\EinSA{\large15-17F}{\large15-17F}
+%\EinSAkleinesSingle
+%\EinSATopSingle
+%\EinSAFuenferOFregel
+%\EinSAFuenferOFselten
+\Mindestlaengen{\large3}{\large3}{\large5}{\large5}
+\EinTreffBed{min. 3er, 12+F}
+\EinTreffAnt{2/3/4/5\treff: Limit-Hebung, 2\OF: 6er 5-8F,
+	}
+\EinKaroBed{min. 3er (4er au"ser bei 4432-Verteilung), 12+F}
+\EinKaroAnt{2/3/4/5\karo: Limit-Hebung, 2\OF: 6er 5-8F}
+\EinCoeurBed{min. 5er, 12+F}
+\EinCoeurAnt{2/3/4\coeur: Limit-Hebung, 2\pik: 6er 5-8F
+	}
+\EinPikBed{min. 5er, 12+F}
+\EinPikAnt{2/3/4\pik: Limit-Hebung
+	}
+\EinSABed{ausgeglichen, 15-17F}
+\EinSAAnt{2\treff: Stayman (8+F; 2\SA: beide OF), 2\karo/\coeur: Transfer (0+F),
+	4\treff: Gerber (04/1/2/3)}
+%
+\ZweiTreffBed
+	{Partieforcing, \SA\ 22+F}
+	{}
+\ZweiTreffAnt{2\karo: Relais}
+\ZweiKaroBed
+	{Semiforcing in \karo}
+	{}
+\ZweiKaroAnt{nat"urlich}
+\ZweiCoeurBed
+	{Semiforcing in \coeur}
+	{}
+\ZweiCoeurAnt{nat"urlich}
+\ZweiPikBed{Semiforcing in \pik}
+	{}
+\ZweiPikAnt{nat"urlich}
+\ZweiSABed{ausgeglichen, 20-21F}
+	{}
+\ZweiSAAnt{3\treff: Stayman (4+F), 3\karo/\coeur: Transfer für \OF (0+F),
+	}
+%
+\BesondereZweierUndHoeher{}
+	{}
+%
+\InfoKontraAb{12F}
+\InfoKontraOF
+%\InfoKontraWerte
+\FarbGegenEiner{8}{15}
+\FarbGegenZweier{10}{16}
+\StilDerGegenreizung{in der Regel konstruktiv}
+\Weiterreizung{Farbwechsel nonforcing, Überruf fragt nach Stopper}
+\EinSAGegen{15-18 F}{11-14 F}{relativ ausgeglichen, Stopper, Weiterreizung wie nach 1 \SA-Eröffnung}
+\SprungGegen{Weak Jumps: schwach, sperrend}
+	{}
+	%{Michaels Präzis:
+	%\UF\ $\rightarrow$ 2\karo: \OF, 2\SA: aUF+\coeur;
+	%\OF\ $\rightarrow$ Überruf: \treff+aOF, 2\SA: \UF, 3\treff: \karo+aOF}
+%
+\GegenEinSA
+	{nat"urlich}{}{}
+	%{Multi-Landy: X: 5-4+ in UF-OF, 2\treff: 5-4+ \OF\ (2\karo: gleiche Länge in \OF),
+	%2\karo: OF-Einfärber,}
+	%{\hphantom{Multi-Landy:} 2\OF: 5-4+ \OF-UF, 2\SA: 5-5+ in \UF, 3\UF: UF-Einfärber}
+	%{gegen schwachen \SA: X: mind. gleiche Stärke}
+\AndereGegenreizungen
+	{}{}{}
+	%{gegen 2\karo-Multi: X: Info-Kontra gegen \coeur-Weak Two}
+	%{Lebensohl nach Info-X; 2\SA\ als Zweifärber in 4. Hand}
+	%{}
+%
+\SequenzHoechste{}
+%\SequenzZweite{}
+%\InnereSequenzHoechste{}
+\InnereSequenzZweite{}
+\AusspielDritteFuenfte
+%\AusspielVierte
+%\AusspielZweiteVierte
+\AusspielSonstiges{Double hoch}%, K $\Rightarrow$ Längenm.}
+\AusspielSA{4.-höchste}
+	{}
+%\PositivHoch
+\PositivNiedrig
+%\PositivSonstiges{}
+%\GeradeHoch
+\GeradeNiedrig
+%\GeradeSonstiges{}
+\Abwuerfe{Direkte Marke}
+\MarkierungenSA{Lavinthal}
+	{}
+%
+\Datum{\today}
+%
+\endMinikarteNeu
+
+\newpage
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+%\setlength{\columnseprule}{.4pt}
+
+\begin{multicols*}{3}
+
+\section*{Konventionen zum System}
+
+\begin{convention}[Schlemmkonventionen] \label{schlemm}
+$\circ$ Mixed Cuebids \\
+$\circ$ 4\SA: Blackwood 0/4, 1, 2, 3 Asse \\
+$\circ$ 5\SA: 0/4, 1, 2, 3 K"onige \\
+\end{convention}
+
+\end{multicols*}
+
+\end{document}
+%    \end{macrocode}
