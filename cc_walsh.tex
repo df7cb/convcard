@@ -1,6 +1,6 @@
 %    \begin{macrocode}
 \documentclass{article}
-\usepackage{miniDBV,amsthm}
+\usepackage{miniDBV2,amsthm}
 \usepackage[a4paper, landscape, margin=5mm]{geometry}
 \usepackage{multicol,tabularx}
 \renewcommand{\familydefault}{cmss}
@@ -18,7 +18,7 @@
 	{\large Christoph Berg}{\large Frank Luithle}
 	%{}{}
 %
-\Grundsystem{{\large 5er Oberfarben} (Walsh, Inverted, Stenberg, Bergen)}
+\Grundsystem{{\large 5er-Oberfarben} (Walsh, Inverted, Stenberg, Bergen)}
 \EinSA{\large15-17F}{\large15-17F}
 %\EinSAkleinesSingle
 %\EinSATopSingle
@@ -26,43 +26,44 @@
 %\EinSAFuenferOFselten
 \Mindestlaengen{\large3}{\large3}{\large5}{\large5}
 \EinTreffBed{min. 3er, 12+F}
-\EinTreffAnt{1\karo: Walsh\Ref{walsh}, 2\treff/2\SA/3\treff: Inverted\Ref{inverted}, 2\OF: 6er 5-8F,
-	2\karo: 5-5 \OF\ 2-5F, 3\karo-\pik: Fit Jump}
+\EinTreffAnt{1\karo: Walsh\Ref{walsh}, Inverted: 2\treff\ (10+F)/2\SA\ (2-6F)/3\treff\ (7-9F),}
+	{2\karo: 5-5 \OF\ (2-5F), 2\OF: 6er (5-8F), 3\karo-\pik: Weak Jump}
 \EinKaroBed{min. 3er (4er au"ser bei 4432-Verteilung), 12+F}
-\EinKaroAnt{2\karo/2\SA/3\karo: Inverted\Ref{inverted}, 2\OF: 6er 5-8F, 3\treff/\OF: Fit Jump}
+\EinKaroAnt{Inverted: 2\karo\ (10+F)/2\SA\ (2-6F)/3\karo\ (7-9F),}
+	{2\OF: 6er 5-8F, 3\treff/\OF: Weak Jump}
 \EinCoeurBed{min. 5er, 12+F}
-\EinCoeurAnt{2\pik: 6er 5-8F, 2\SA: Stenberg\Ref{stenberg}, 3\UF/\coeur/4\coeur: Bergen\Ref{bergen},
-	3\pik: bel. Chicane, 3\SA: \pik-Splinter}
+\EinCoeurAnt{2\treff: 3er (10+F), 2\karo: 5er (10+F), 2\pik: 6er (5-8F), 2\SA: Stenberg\Ref{stenberg},}
+	{3\UF/\coeur/4\coeur: Bergen\Ref{bergen}, 3\pik: bel. Chicane, 3\SA: \pik-Splinter}
 \EinPikBed{min. 5er, 12+F}
-\EinPikAnt{2\SA: Stenberg\Ref{stenberg}, 3\UF/\pik/4\pik: Bergen\Ref{bergen},
-	3\coeur: bel. Chicane, 3\SA: \coeur-Splinter}
+\EinPikAnt{2\treff: 2er (10+F), 2\karo/\coeur: 5er (10+F), 2\SA: Stenberg\Ref{stenberg},}
+	{3\UF/\pik/4\pik: Bergen\Ref{bergen}, 3\coeur: bel. Chicane, 3\SA: \coeur-Splinter}
 \EinSABed{ausgeglichen, 15-17F, 5er \OF\ möglich}
-\EinSAAnt{2\treff: Stayman (0+F), 2\karo-\pik: Transfer\Ref{transfer} (0+F),
-	4\treff: Gerber (04/1/2/3), 4\karo: 5-5+ \OF}
+\EinSAAnt{2\treff: Stayman (0+F), 2\karo-\pik: Transfer\Ref{transfer} (0+F),}
+	{4\treff: Gerber (04/1/2/3), 4\karo: 5-5+ \OF}
 %
-\ZweiTreffBed{Weak Two in \karo\ (6-10F) oder}
-	{Benjamin: bel. Semiforcing mit 6er-Farbe / 8 Spielstichen (16+F), \SA\ 22-23F, \SA\ 26-27F}
-	%
+\ZweiTreffBed{Weak Two in \karo\ (6-10F),
+	Semiforcing (6er-Farbe, 8 Stiche, 16+F), \SA\ 22-23F, \SA\ 26-27F}
+	{}
 \ZweiTreffAnt{2\karo: Relais, 2\SA: Ogust\Ref{ogust} für \karo-Weak Two}
-\ZweiKaroBed{Weak Two in \coeur\ (6-10F) oder}
-	{Benjamin: bel. Partieforcing mit 6er-Farbe / 9 Spielstichen (18+F), \SA\ 24-25F, \SA\ 28+F}
-	%
+\ZweiKaroBed{Weak Two in \coeur\ (6-10F),
+	Partieforcing (6er-Farbe, 9 Stiche, 18+F), \SA\ 24-25F, \SA\ 28+F}
+	{}
 \ZweiKaroAnt{2\coeur: Relais, 2\SA: Ogust\Ref{ogust} für \coeur-Weak Two}
 \ZweiCoeurBed
 	{Zweifärber mit \coeur\ (6-10F, 5-5+ \coeur/?, in 3. Hand auch 5-4)}
 	{}
-\ZweiCoeurAnt{2\pik: zum spielen oder ausbessern, 2\SA: Frage nach 2. Farbe/Stärke\Ref{zweifaerber}}
+\ZweiCoeurAnt{2\pik: zum Spielen oder Ausbessern, 2\SA: Frage nach 2. Farbe/Stärke\Ref{zweifaerber}}
 \ZweiPikBed{Weak Two in \pik\ (6-10F)}
 	{}
 \ZweiPikAnt{2\SA: Ogust\Ref{ogust}}
-\ZweiSABed{ausgeglichen, 20-21F, 5er \OF\ und bel. 5422-Verteilung möglich}
+\ZweiSABed{ausgeglichen, 20-21F, 5er \OF\ möglich}
 	{}
 \ZweiSAAnt{3\treff: Puppet-Stayman\Ref{puppet} (4+F), 3\karo/\coeur: Transfer für \OF (4+F),
 	4\karo: 5-5+ in \OF\ (schwach)}
 %
 \BesondereZweierUndHoeher{3\UF: 7+ \UF (5-10F, in NG/3. Hand 6er möglich),
-	3\SA: Gambling\Ref{gambling} (in 3./4. Hand zum spielen)}
-	{4\UF: stehendes 7er \OF\ mit Nebenwert, 4\SA: 6-5+ in \UF}
+	3\SA: Gambling\Ref{gambling} (in 3./4. Hand zum Spielen)}
+	{4\UF: stehendes 7er-\OF\ mit Nebenwert, 4\SA: 6-5+ in \UF}
 %
 \InfoKontraAb{12F}
 \InfoKontraOF
@@ -127,14 +128,14 @@
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
-1\treff & 1\karo & 6-7F & (1) ausgegl. ohne 4er \OF \\
-        &        &      & \hspace{1em} (3er \karo\ möglich) \\
+1\treff & 1\karo & 6-7F & (1) ausgegl. ohne 4er-\OF \\
+        &        &      & \hspace{1em} (3er-\karo\ möglich) \\
      &      & 6+F & (2) \karo-Einfärber \\
      &      & 12+F & (3) 5-4+ in \karo/OF \\
 1\OF &      &      & 5-4+ \treff/OF \\
-1\SA &      & 12-14F & ausgegl., 4er \OF\ möglich \\
+1\SA &      & 12-14F & ausgegl., 4er-\OF\ möglich \\
      & 2\treff & & UF-Schlemmint., Vertfr. (2) \\
-     & 2\karo & 6-9F & zum spielen (1/2) \\
+     & 2\karo & 6-9F & zum Spielen (1/2) \\
      & 2\OF & & Partieforcing (3) \\
      & 2\SA & 8-9F & natürlich (2) \\
      & 3\treff/\OF &  & Splinter (2) \\
@@ -148,49 +149,68 @@ Weiterreizung nach Verteilungsfrage:
 \hline
 1\treff & 1\karo & \\
 1\SA & 2\treff & \\
-2\karo & & 3er \karo, nicht 4333-Vert. \\
-       & 2\coeur & Frage nach \treff-Länge (2\pik: 5er \treff, 2\SA: 4er \treff) \\
+2\karo & & 3er-\karo, nicht 4333-Vert. \\
+       & 2\coeur & Frage nach \treff-Länge (2\pik: 5er-\treff, 2\SA: 4er-\treff) \\
 2\coeur & & 3424-Vert. \\
 2\pik & & 3424-Vert. \\
 2\SA & & bel. 4333-Vert. \\
-     & 3\treff & Frage nach 4er (3\karo: 4er \treff, 3\OF: 4er \OF) \\
-3\treff & & 3325-Vert. (3\karo: RKC) \\
+     & 3\treff & Frage nach 4er (3\karo: 4er-\treff, 3\OF: 4er-\OF) \\
+3\treff & & 3325-Vert. (3\karo: KCB) \\
 3\karo & & 4432-Vert. \\
 \hline
 \end{tabularx}
 \end{convention}
 
-\begin{convention}{Checkback-Stayman}{checkback}
-Antw. zeigt 5er OF und mind.
-einl. Hand bei 1\SA-Rückg. des Eröffners (aOF = andere OF).
+\begin{convention}{Relais-Transfer}{relaistrf}
+Nach 1\SA-Rückgebot ist 2\treff\ Transfer auf 2\karo\ und
+2\SA\ Transfer auf 3\treff.
 
-\begin{tabularx}{\columnwidth}{|lllX|}
+\begin{minipage}{\columnwidth}
+\begin{tabularx}{\columnwidth}{|c|c|l|l|X|}
 \hline
-1\UF & 1\OF & & \\
-1\SA & 2\treff & & Checkback-Stayman \\
-2\karo &       & 12-13 & kein 3er \OF \\
-2\OF &         & 12-13 & 3er \OF \\
-2aOF &         & 12-14 & 4er aOF, kein 3er \OF \\
-2\SA &         & 13-14 & kein 3er \OF \\
-3\UF &         & 13-14 & 3er \OF, gute \UF \\
-3\OF &         & 13-14 & 3er \OF \\
+\multicolumn{2}{|c|}{\textbf{Haltung}} & \multicolumn{3}{c|}{\textbf{St"arke}}\\
+\hline
+\emph{OF} & \emph{NF} & schwach & einladend & stark \\
+\hline
+\hline
+4OF  & ausg.  & pass  & 2\treff; 2\SA & 3\SA\\
+\hline
+4OF  & 5\treff & 2\SA; p &
+                \emph{nicht zeigb.} &
+                nach 1\treff: 2\SA; 3\karo{}\\
+4OF  & 5\karo & 2\treff; p &
+                2\karo{}\footnote{genau einladend, sonst Walsh} &
+                nach 1\karo: 2\SA; 3\karo{}\\
+\hline
+5OF  & --    & 2OF  &
+                2\treff; 2OF{}\footnote{mindestens einladend} &
+                2\treff; 3\SA\\
+5OF  & 5$x$ & 2OF & 2\treff; 3$x$ & 3$x$\\
+5\pik & 4\coeur & 2\coeur & 2\treff; 2\coeur & 2\SA; 3\coeur\\
+\hline
+6OF  & --    & 2OF  & 2\treff; 3OF & 3OF{}\footnote{leichtes Schlemm-Interesse}\\
+      & Sngl  &       &             & 4$x$\\
+      & Chic  &       &             & 2\treff; 4$x$\\
 \hline
 \end{tabularx}
+\centerline{\emph{OF = Oberfarbe des Antwortenden, NF = Nebenfarbe}}%
+\end{minipage}
+
 \end{convention}
 
-\begin{convention}{Inverted Minors}{inverted} ~
-
-\begin{tabularx}{\columnwidth}{|lllX|}
-\hline
-1\UF & 2\SA & 2-6F & \\
-     & 3\UF & 7-9F & \\
-     & 2\UF & 10-11+F & \\
-2\SA &      & 12-14F & \\
-3\UF &      & 12-14F & \\
-sonst. &    & 14-15+F & zeigt Werte \\
-\hline
-\end{tabularx}
-\end{convention}
+%\begin{convention}{Inverted Minors}{inverted} ~
+%
+%\begin{tabularx}{\columnwidth}{|lllX|}
+%\hline
+%1\UF & 2\SA & 2-6F & \\
+%     & 3\UF & 7-9F & \\
+%     & 2\UF & 10-11+F & \\
+%2\SA &      & 12-14F & \\
+%3\UF &      & 12-14F & \\
+%sonst. &    & 14-15+F & zeigt Werte \\
+%\hline
+%\end{tabularx}
+%\end{convention}
 
 \vfill
 \columnbreak
@@ -202,11 +222,11 @@ sonst. &    & 14-15+F & zeigt Werte \\
 1\OF & 2\SA & 12+F & 4+ \OF \\
 3\OF &      & 16+F & keine Kürze \\
 3\SA &      & 14-15F & keine Kürze \\
-4\OF &      & 11-13F & keine Kürze \\
+4\treff &   & 11-13F & keine Kürze \\
 3\treff-3\pik &    & & Kürze \\
-     & Relais & & Chicane-Frage + RKC \\
-1. Stufe &  & & Chicane (Relais: RKC) \\
-2+. Stufe &  & & Single, rollend RKC \\
+     & Relais & & Chicane-Frage + KCB \\
+1. Stufe &  & & Chicane (Relais: KCB) \\
+2+. Stufe &  & & Single, rollend KCB \\
 \hline
 \end{tabularx}
 \end{convention}
@@ -215,10 +235,10 @@ sonst. &    & 14-15+F & zeigt Werte \\
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
-1\OF & 3\treff & 9-11F & 4er \OF \\
-     & 3\karo & 7-9F & 4er \OF \\
-     & 3\OF & 0-6F & 4er \OF \\
-     & 4\OF & 0-9F & 5er \OF \\
+1\OF & 3\treff & 9-11F & 4er-\OF \\
+     & 3\karo & 7-9F & 4er-\OF \\
+     & 3\OF & 0-6F & 4er-\OF \\
+     & 4\OF & 0-9F & 5er-\OF \\
 \hline
 \end{tabularx}
 \end{convention}
@@ -229,7 +249,7 @@ sonst. &    & 14-15+F & zeigt Werte \\
 \hline
 1\SA & 2\karo & 0+F & 5+ \coeur & \\
      & 2\coeur & 0+F & 5+ \pik & \\
-     & 2\pik & 0+F & 5-5+ \UF\ oder 6er UF & \\
+     & 2\pik & 0+F & 5-5+ \UF\ oder 6er-UF & \\
 2\SA &       & & \karo-Präferenz & \\
 3\treff &    & & \treff-Präferenz & \\
 \hline
@@ -240,9 +260,8 @@ mit 4er-Anschl. und Minimum 3 in Farbe.
 \end{convention}
 
 \begin{convention}{Ogust}{ogust}
-Auch nach schw. Sprüngen in 2er Stufe.
-Nächste freie Farbe ist Kürzenfrage. \emph{Danach} 4\treff\
-(notfalls höher) PKCA\Ref{pkca}.
+Auch nach schw. Sprüngen in 2er-Stufe.
+Nächste freie Farbe ist erst Kürzenfrage, danach PKCA\Ref{pkca}.
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
@@ -258,29 +277,29 @@ Nächste freie Farbe ist Kürzenfrage. \emph{Danach} 4\treff\
 \end{convention}
 
 \begin{convention}{Zweifärber}{zweifaerber}
-Danach ist nächste freie Farbe Kürzenfrage, 4\pik\ PKCA\Ref{pkca} auf
-\coeur-Basis und 4\UF\ PKCA\Ref{pkca} (falls möglich) auf \UF-Basis.
+Danach ist nächste freie Farbe Kürzenfrage. Die 1./2. freie Farbe ist dann
+PKCA\Ref{pkca} für die niedrige/hohe Farbe.
 
-\begin{tabularx}{\columnwidth}{|lllllX|}
+\begin{tabularx}{\columnwidth}{|llllX|}
 \hline
-2\coeur & 2\SA & &       & Frage 2. Farbe/Stärke & \\
-3\treff &      & & 6-10F & 5-5 \coeur/\treff & \\
-	& 3\karo &  &       & Frage & \\
-	& & 3\coeur & 6-8F & & \\
-	& & 3\pik   & 9-10F & \pik-Kürze & \\
-	& & 3\SA    & 8-10F & \karo-Kürze & \\
-3\karo  &      & & 6-8F  & 5-5 \coeur/\karo & \\
-3\coeur &      & & 6-8F  & 5-5 \coeur/\pik & \\
-3\pik   &      & & 9-10F & 5-5 \coeur/\pik & \\
-3\SA    &      & & 9-10F & 5-5 \coeur/\karo & \\
+2\coeur & 2\SA &       & Frage 2. Farbe/Stärke & \\
+3\treff &      & 6-10F & 5-5 \coeur/\treff; 3\karo: weitere Frage & \\
+	& 3\coeur & 6-8F & \karo-Kürze & \\
+	& 3\pik   & 6-8F & \pik-Kürze & \\
+	& 3\SA    & 8-10F & \karo-Kürze & \\
+	& 4\treff & 8-10F & \pik-Kürze & \\
+3\karo  &      & 6-8F  & 5-5 \coeur/\karo & \\
+3\coeur &      & 6-8F  & 5-5 \coeur/\pik\ (4\treff/\karo: \coeur/\pik-Basis) & \\
+3\pik   &      & 9-10F & 5-5 \coeur/\pik\ (dto.) & \\
+3\SA    &      & 9-10F & 5-5 \coeur/\karo & \\
 \hline
 \end{tabularx}
 \end{convention}
 
-%\vfill
-%\columnbreak
+\vfill
+\columnbreak
 
-\begin{convention}{Preempt Key Card Ask (PKCA)}{pkca}
+\begin{convention}{Preempt Keycard Ask (PKCA)}{pkca}
 
 Nach allen schwachen Eröffungen und Sprüngen, meist mit 4\treff\ gestellt.
 Rollend:
@@ -300,27 +319,27 @@ Rollend:
 
 \begin{tabularx}{\columnwidth}{|llX|}
 \hline
-2\SA & 3\treff & Frage nach 5er und 4er \OF \\
-3\karo  &      & 4er \OF, keine 5er \\
-	& 3\coeur & 4er \pik\ (4er \coeur\ möglich) \\
-	& 3\pik & 4er \coeur \\
-3\coeur &      & 5er \coeur \\
-3\pik   &      & 5er \pik \\
-3\SA    &      & kein 5er/4er \OF \\
+2\SA & 3\treff & Frage nach 5er- und 4er-\OF \\
+3\karo  &      & 4er-\OF, kein 5er-\OF \\
+	& 3\coeur & 4er-\pik\ (4er-\coeur\ möglich) \\
+	& 3\pik & 4er-\coeur \\
+3\coeur &      & 5er-\coeur \\
+3\pik   &      & 5er-\pik \\
+3\SA    &      & kein 5er/4er-\OF \\
 \hline
 \end{tabularx}
 
-Transfer-Annahme zeigt ein Double, 3\SA\ einen 3er Anschluss.
-Andere Gebote zeigen gute 3/4er Anschlüsse und sind Cuebids.
+Transfer-Annahme zeigt ein Double, 3\SA\ einen 3er-Anschluss.
+Andere Gebote zeigen gute 3/4er-Anschlüsse und sind Cuebids.
 \end{convention}
 
 \begin{convention}{Gambling}{gambling} ~
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
-3\SA    & 4\treff      & zum spielen oder ausbessern & \\
-        & 4\OF         & zum spielen & \\
-        & 5\UF/6\treff & zum spielen oder ausbessern & \\
+3\SA    & 4\treff      & zum Spielen oder Ausbessern & \\
+        & 4\OF         & zum Spielen & \\
+        & 5\UF/6\treff & zum Spielen oder Ausbessern & \\
         & 4\karo       & Kürzenfrage & \\
 4\OF    & & \OF-Kürze & \\
 4\SA    & & 7222-Verteilung & \\
@@ -332,10 +351,9 @@ Andere Gebote zeigen gute 3/4er Anschlüsse und sind Cuebids.
 
 \begin{convention}{Schlemmkonventionen}{schlemm}
 $\circ$ DOPI-ROPI \\
-$\circ$ Mixed Cuebids, erstes 5er Gebot zeigt Erstrundenkontrolle \\
-$\circ$ Roman Key Card 14/30, danach rollend nach Trumpfdame und platzierten
- Königen \\
-$\circ$ Exclusion Key Card: ungewöhnlicher Sprung meist in 5er Stufe \\
+$\circ$ Mixed Cuebids, erstes 5er-Gebot zeigt Erstrundenkontrolle \\
+$\circ$ Roman KCB 14/30, rollend nach Trumpf-Q und platzierten K \\
+$\circ$ Exclusion Keycard: ungewöhnlicher Sprung meist in 5er-Stufe \\
 $\circ$ Josephine: 5\SA\ im Sprung fragt Topfiguren (0/1/2/3)
 \end{convention}
 
