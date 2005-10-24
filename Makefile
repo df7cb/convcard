@@ -1,6 +1,6 @@
 DVIPSFLAGS=-t landscape
 
-PS = cc_walsh.ps cc_inv_bergen.ps cc_basic.ps cc_forumd.ps
+PS = cc_walsh.ps cc_inv_bergen.ps cc_basic.ps cc_forumd.ps cc_moscito05.ps
 PDF = $(patsubst %.ps,%.pdf,$(PS))
 
 #quick: cc_walsh.ps
@@ -9,6 +9,7 @@ all: $(PS) $(PDF)
 
 cc_walsh.dvi: miniDBV2.sty
 cc_inv_bergen.dvi: miniDBV.sty
+cc_moscito05.dvi: miniDBV2.sty
 
 %.dvi: %.tex
 	latex $<

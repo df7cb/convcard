@@ -1,0 +1,415 @@
+%    \begin{macrocode}
+\documentclass{article}
+\usepackage{miniDBV2}
+\usepackage[a4paper, landscape, margin=5mm]{geometry}
+\usepackage{multicol,tabularx}
+\renewcommand{\familydefault}{cmss}
+
+\newcounter{conv}
+\setcounter{conv}{0}
+\newenvironment{convention}[2]{{\bf \refstepcounter{conv}\label{#2}\theconv\ #1.}}{}
+\newcommand{\Ref}[1]{$^{\ref{#1}}$}
+
+\begin{document}
+
+\hspace{2.6mm}
+\beginMinikarteNeu
+	{}{}
+%
+\Grundsystem{{\large Moscito 2005}}
+\EinSA{\large 11-14 FP}{\large 11-14 FP}
+%\EinSAkleinesSingle
+%\EinSATopSingle
+%\EinSAFuenferOFregel
+%\EinSAFuenferOFselten
+\Mindestlaengen{---}{$\!$4\coeur}{$\!$4\pik}{$\!$UF}
+\EinTreffBed{15+FP/9+QP, bel. Verteilung}
+\EinTreffAnt{1\karo: 9+FP/6+QP, 1\coeur: 6-9FP ausg. oder keine 5er-OF,
+	1\pik: 0-5FP/0-2QP, bel., 1\SA: 6-9FP,}
+	{6\karo / 5\coeur-4UF / 5OF-440, 2\treff: 6-9FP, 6\coeur / 5\pik-4UF,
+	\dots}
+\EinKaroBed{9-14FP/6-8QP, 4+\coeur, 5er-UF möglich}
+\EinKaroAnt{1\coeur: Step}
+	{}
+\EinCoeurBed{9-14FP/6-8QP, 4+\pik, 5er-UF möglich}
+\EinCoeurAnt{1\pik: Step}
+	{}
+\EinPikBed{9-14FP/6-8QP, 6+\karo (evtl. 4er-OF) oder UF-Zweifärber}
+\EinPikAnt{1\SA: Step}
+	{}
+\EinSABed{ausgeglichen, 11-14 FP, wenn 4er-OF, dann 11-12}
+\EinSAAnt{2\treff: Stayman (0\pl FP), 2\karo/\coeur: Transfer\Ref{transfer} \ra OF (0\pl FP),
+	2\pik: Transfer\Ref{transfer} \ra UF (0\pl FP)}
+	{4\treff: Gerber (04/1/2/3), 4\karo: 5-5\pl \OF}
+%
+\ZweiTreffBed{9-14FP/6-8QP, 6+\treff (keine \karo, evtl. 4er-OF)}
+	{}
+\ZweiTreffAnt{2\karo: Step}
+\ZweiKaroBed{}
+	{}
+\ZweiKaroAnt{}
+\ZweiCoeurBed{10-12FP, 5\coeur-332}
+	{}
+\ZweiCoeurAnt{2\SA: Frage nach Double, Rest nonforcing}
+\ZweiPikBed{10-12FP, 5\pik-332}
+	{}
+\ZweiPikAnt{2\SA: Frage nach Double, Rest nonforcing}
+\ZweiSABed{}
+	{}
+\ZweiSAAnt{}
+%
+\BesondereZweierUndHoeher{3\UF: 7\pl \UF (5-10 FP, in NG/3. Hand 6er möglich),
+	3\SA: Gambling\Ref{gambling} (in 3./4. Hand zum Spielen)}
+	{4\UF: stehendes 7er-\OF\ mit Nebenwert, 4\SA: 6-5\pl in \UF}
+%
+\InfoKontraAb{12 FP}
+\InfoKontraOF
+%\InfoKontraWerte
+\FarbGegenEiner{8}{15}
+\FarbGegenZweier{10}{16}
+\StilDerGegenreizung{in der Regel konstruktiv, schwache Hebungen}
+\Weiterreizung{Farbw.\ nonf., Überr.\ fr.\ Stopper ($\rightarrow$\SA),
+	zeigt Fit/stark Einf.}
+\EinSAGegen
+	%{15-18 FP}
+	{Raptor}
+	{11-14 FP}
+	{relativ ausgeglichen, Stopper, Weiterreizung wie nach 1 \SA-Eröffnung}
+\SprungGegen{Weak Jumps: schwach, sperrend}
+	{Michaels Präzis:
+	(1UF)\ra 2\karo: \OF, 2\SA: aUF/\coeur;
+	(1OF)\ra 2OF: \treff/aOF, 2\SA: \UF, 3\treff: \karo/aOF}
+%
+\GegenEinSA{Multi-Landy: X: 5-4 UF-OF, 2\treff: 5-4\pl \OF\ (\ra 2\karo: gleiche Länge in \OF),
+	2\karo: OF-Einfärber,}
+	{\hphantom{Multi-Landy:} 2OF: 5-4\pl OF/UF, 2\SA: 5-5\pl in \UF, 3UF: UF-Einfärber}
+	{gegen schwachen \SA: X: mind. gleiche Stärke (oberes Ende Punktspanne), Rest wie oben}
+\AndereGegenreizungen
+	{Starke 1\treff \ra Crash;
+	2\karo-Multi \ra X: Info-X gegen \coeur-Weak Two}
+	{Lebensohl und Scrambling 2\SA\ nach Info-X;
+	1\SA/2\SA\ als Zweifärber in 4. Hand; Kompetitive 2\SA}
+	{Kleine \treff \ra nach 1\treff-1\karo-1\SA: X: Strafe}
+%
+\SequenzHoechste{}
+%\SequenzZweite{}
+%\InnereSequenzHoechste{}
+\InnereSequenzZweite{}
+\AusspielDritteFuenfte
+%\AusspielVierte
+%\AusspielZweiteVierte
+\AusspielSonstiges{Double hoch (1.)}
+\AusspielSA{4.-höchste, 10/9 verspricht 0 oder 2 höhere}
+	{}
+%\PositivHoch
+\PositivNiedrig
+%\PositivSonstiges{}
+%\GeradeHoch
+\GeradeNiedrig
+%\GeradeSonstiges{}
+\Abwuerfe{Direkte Marke, Figur zeigt Karte darunter}
+\MarkierungenSA{Lavinthal, Smith Peter}
+	{}
+%
+\Datum{\today}
+%
+\endMinikarteNeu
+
+\newpage
+\footnotesize
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex}
+%\setlength{\columnseprule}{.4pt}
+
+\begin{multicols*}{4}
+
+\section*{Systembeschreibung}
+
+Das nächste Gebot ("`Step"') fragt jeweils nach weiterer Blattbeschreibung,
+sonst wird natürlich weitergereizt. Es werden Blatttyp, dann Kürzen, genaue
+Verteilung, Stärke in QP über bekannter Basis, und Denial Cuebids erfragt
+(Überspringen: Keycard Blackwood). 3\SA ist zum Spielen, 4\karo das
+Endsignal der Relais.
+
+\begin{convention}{1\treff--1\pik}{1tr1pi} 0-5FP/0-2QP, bel. Verteilung.
+
+%\begin{tabularx}{\columnwidth}{|lX|}
+%\hline
+%1\pik   & 0-5FP, bel. Verteilung \\
+%\hline
+%\end{tabularx}
+\end{convention}
+
+\begin{convention}{1\treff--1\coeur,1\SA,2\treff,\dots,2\pik}{sempos}
+Semipositiv, etwa 6-9FP/3-5QP.
+
+\begin{tabularx}{\columnwidth}{|lX|}
+\hline
+1\coeur   & ausgegl. oder unausgegl. ohne 5er OF \\
+\quad 1\pik & Step \\
+\quad \quad 1\SA & ausgegl. \\
+\quad \quad 2\treff & 5\treff \\
+\quad \quad 2\karo & 5-4 UF \\
+\quad \quad 2\coeur & 4\coeur-5\karo \\
+\quad \quad 2\pik & 4\pik-5\karo \\
+\quad \quad 2\SA & 0445 oder 0454 \\
+\quad \quad 3\treff & 4045 oder 4054 \\
+\quad \quad 3\karo & 4405 \\
+\quad \quad 3\coeur & 4450 \\
+\quad 1\SA & 15-17FP ausgegl. \\
+\quad 2\treff & 5+\coeur \\
+\quad 2\karo & 5+\pik \\
+\quad 2\coeur & 4\coeur-5+UF \\
+\quad 2\pik & 4\pik-5+UF \\
+\quad 2\SA & UF-Zweifärber \\
+\hline
+1\SA    & 6-9FP, 6\karo / 5\coeur{}+UF / 5OF-440 \\
+\quad 2\treff & Step \\
+\quad \quad 2\karo & $ $\coeur{}+\treff \\
+\quad \quad 2\coeur & $ $\coeur{}+\karo \\
+\quad \quad 2\pik & $ $\karo \\
+\quad \quad 2\SA & 5404 oder 4504 \\
+\quad \quad 3\treff & 5440 oder 4540 \\
+\quad \quad 3\karo & 0544 \\
+\quad \quad 3\coeur & 5044 \\
+\quad 2\karo,2\coeur & pass/correct \\
+\quad 2\pik & nat., nf \\
+\quad 2\SA & $ $\coeur \\
+\quad 3\treff,3\karo & pass/correct \\
+\hline
+2\treff & 6\coeur oder 5\pik{}+UF \\
+\quad 2\karo & Step \\
+\quad \quad 2\coeur & $ $\pik{}+\treff \\
+\quad \quad 2\pik & $ $\coeur \\
+\quad \quad 2\SA{}+ & $ $\pik{}+\karo \\
+\quad 2\coeur,2\pik & pass/correct \\
+\quad 2\SA & $ $\pik \\
+\quad 3\treff..3\coeur & nat., nf \\
+\hline
+2\karo  & 5\pik-4\coeur \\
+\quad 2\coeur & Step \ra Zweifärber \\
+\quad 2\pik & to play \\
+\quad 2\SA..3\coeur & nat., nf \\
+\hline
+2\coeur & 4\pik-5+\coeur \\
+\quad 2\pik & preference \\
+\quad 2\SA & Step(!) \ra Zweifärber \\
+\quad 3\treff,3\karo & nat., nf \\
+\hline
+\end{tabularx}
+
+\vfill
+\columnbreak
+
+\begin{tabularx}{\columnwidth}{|lX|}
+\hline
+2\pik & 6\pik \\
+\quad 2\SA & Step \ra Einfärber \\
+\quad 3\treff..3\coeur & nat., nf \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\begin{convention}{1\treff--1\karo}{1tr2ka}
+Positiv, etwa 9+FP/6+QP. Mit 12+QP (18+FP) fragt der Eröffner mit 1\coeur
+weiter, mit Minimum zeigt er selbst.
+
+\begin{tabularx}{\columnwidth}{|lX|}
+\hline
+1\pik   & Zweifärber ohne \pik oder UF-Einfärber \\
+\quad 2\treff & $ $\treff{}+\coeur oder \treff \\
+\quad 2\karo & $ $\karo{}+\coeur \\
+\quad 2\coeur & $ $\karo \\
+\quad 2\pik{}+ & UF-Zweifärber \\
+1\SA    & ausgegl. oder 4441 \\
+\quad 2\karo & keine OF \\
+\quad 2\coeur & ausgegl., 4-5 \coeur \\
+\quad 2\pik & ausgegl., 4 \pik \\
+\quad 2\SA & 5 \pik-332 \\
+\quad 3\treff & 4-4-32 \\
+\quad 3\karo..3\SA & 1444, 4144, 4414, 4441 \\
+2\treff & $ $\treff{}+\pik oder \pik \\
+2\karo  & $ $\karo{}+\pik \\
+2\coeur & $ $\coeur \\
+2\pik{}+ & OF-Zweifärber \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\begin{convention}{1\treff--2\SA{}+}{1tr3f} 9+FP/6+QP, Dreifärber mit Chicane oder
+stehende Farbe.
+
+\begin{tabularx}{\columnwidth}{|lX|}
+\hline
+2\SA & bel. 5440 mit OF-Chicane \\
+3\treff & stehende 7er oder 8er Farbe \\
+3\karo & bel. 5440 mit \karo-Chicane \\
+3\coeur..3\SA & 4450, 4540, 5440 \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\begin{convention}{Einfärber}{1suiter} Auflösung der Einfärber.
+
+\begin{tabularx}{\columnwidth}{|rlX|}
+\hline
+1 & keine Kürze & $\downarrow$ \\
+2 & hohe Kürze & 6223 \\
+3 & mittlere Kürze & 6232 \\
+4 & 6331 & 6322 \\
+5 & 7321 & 7222 \\
+6 & 7330 & \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\begin{convention}{Zweifärber}{2suiter} Auflösung der Zweifärber.
+
+\begin{tabularx}{\columnwidth}{|rlX|}
+\hline
+1 & Reverser & \\
+2 & Long-legged (5-5+) & $\downarrow$ \\
+3 & hohe Kürze & \\
+4 & 5422 & 5521 \\
+5 & 5431 & 5530 \\
+6 & 6421 & 6511 \\
+7 & 6430 & 6520 \\
+8 & 7411 & 6610 \\
+9 & 7420 & 7510 \\
+10&      & 7600 \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\vfill
+\columnbreak
+
+\begin{convention}{1\karo}{1ka} 9-14FP/6-8QP, 4+\coeur.
+
+\begin{tabularx}{\columnwidth}{|lX|}
+\hline
+1\coeur & Step \\
+\quad 1\pik & $ $\pik{}-\coeur \ra 1\SA Step \\
+\quad \quad 2\treff & $ $\pik{}-\coeur{}-\treff \ra 2\karo Step \\
+\quad \quad \quad 2\coeur..2\SA & 4414, 4405, 4504 \\
+\quad \quad 2\karo & $ $\pik{}-\coeur{}-\karo \ra 2\coeur Step\\
+\quad \quad \quad 2\pik..3\treff & 4441, 4450, 4540 \\
+\quad \quad 2\coeur & 4-4-32 \ra 2\pik Step \\
+\quad \quad 2\pik & 5\pik-6\coeur \\
+\quad \quad 2\SA{}+ & 4\pik-5\coeur \ra Zweifärber \\
+\quad 1\SA & ausgegl. / Dreifärber o. \pik / 4\coeur-5\karo \ra 2\treff Step \\
+\quad \quad 2\karo & 5\karo-4\coeur (Fehler?) \\
+\quad \quad 2\coeur & ausgegl., 4\coeur \ra 2\pik Step\\
+\quad \quad \quad 2\SA & 4\coeur-4\treff-32 \\
+\quad \quad \quad 3\treff,3\karo & 2443, 3442 \\
+\quad \quad \quad 3\coeur & 3433(!) \\
+\quad \quad 2\pik & 5\coeur-332 \\
+\quad \quad 2\SA & Dreifärber ohne \pik \ra 3\treff Step\\
+\quad \quad \quad 3\treff..3\pik & 1444, 0445, 0454, 0544 \\
+\quad 2\treff & $ $\treff (4-5 mögl.) \\
+\quad 2\karo & 5\coeur-4\karo \\
+\quad 2\coeur & $ $\coeur-Einfärber, min. \\
+\quad 2\pik{}+ & $ $\coeur-Einfärber, max. \\
+1\pik & 4+\pik, 6-12FP \\
+1\SA & ausg., 6-9FP \\
+2\SA & 4\coeur, einl. (* neue Farbe: Kürze) \\
+3\coeur & 4\coeur, 6-9FP \\
+3\SA & $ $\coeur-Fit, 12-15FP, ausg. (*) \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\begin{convention}{1\coeur}{1co} 9-14FP/6-8QP, 4+\pik.
+
+\begin{tabularx}{\columnwidth}{|lX|}
+\hline
+1\pik & Step \\
+\quad 1\SA & ausgegl. oder Dreifärber ohne \coeur oder 4\pik-5\karo \ra 2\treff Step \\
+\quad \quad 2\karo & 5\karo-4\pik (Fehler?) \\
+\quad \quad 2\coeur & ausgegl., 4\pik, keine 4\coeur (\ra 2\pik Step) \\
+\quad \quad \quad 2\SA & 4\pik-4\treff-32 \\
+\quad \quad \quad 3\treff,3\karo & 4243, 4342 \\
+\quad \quad \quad 3\coeur & 4333(!) \\
+\quad \quad 2\pik & 5332 \\
+\quad \quad 2\SA & Dreifärber ohne \coeur (\ra 3\treff Step) \\
+\quad \quad \quad 3\karo..3\SA & 4144, 4045, 4054, 5044 \\
+\quad \quad 3\treff,3\karo & 5404, 5440 \\
+\quad 2\treff & $ $\treff (4-5 mögl.) \\
+\quad 2\karo & 5+\pik-4+\karo \\
+\quad 2\coeur & 5+\pik-4+\coeur \\
+\quad 2\pik & $ $\pik-Einfärber, min. \\
+\quad 2\SA{}+ & $ $\pik-Einfärber, max. \\
+1\SA & ausg., 6-9FP \\
+2\SA & 4\pik, einl. (*) \\
+3\pik & 4\pik, 6-9FP \\
+3\SA & $ $\pik-Fit, 12-15FP, ausg. (*) \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\vfill
+\columnbreak
+
+\begin{convention}{1\pik}{1pi} 9-14FP/6-8QP, \karo-Einfärber oder UF-Zweifärber.
+
+\begin{tabularx}{\columnwidth}{|lX|}
+\hline
+1\SA & Step \\
+\quad 2\treff & UF-Zweifärber \\
+\quad 2\karo & $ $\karo-Einfärber, min. \\
+\quad 2\coeur & 6\karo-4\coeur \\
+\quad 2\pik & 6\karo-4\pik \\
+\quad 2\SA{}+ & $ $\karo-Einfärber, max. \\
+2\treff & 5+\coeur (Transfer) \\
+2\karo & 5+\pik (Transfer) \\
+       & Annahme: Hx oder besser, Step = negativ \\
+\quad 2SA & Partieinteresse \\
+\quad \quad 3\treff,3\karo & lange Farbe, min. \\
+\quad \quad 3OF & 3er OF, min. \\
+\quad \quad 3aOF & lange \treff, max., keine 3er OF \\
+\quad \quad 3\SA & lange \karo, max. keine 3er OF \\
+\quad \quad 4OF & 3er OF, max. \\
+2\coeur & 5+\treff \\
+2\pik & Limithebung in jeder UF (3+-3+)\\
+\quad 2\SA & $ $\treff, max. \\
+\quad 3\treff,3\karo & to play \\
+\quad 3\coeur,3\pik & $ $\karo, max., Kürze \\
+2\SA & 4+\karo, Limithebung \\
+3\treff & pass/correct \\
+3\karo & to play \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\begin{convention}{2\treff}{2tr} 9-14FP/6-8QP, \treff-Einfärber.
+
+\begin{tabularx}{\columnwidth}{|lX|}
+\hline
+2\karo & Step \\
+\quad 2\coeur & 6\treff-4\coeur \\
+\quad 2\pik & 6\treff-4\pik \\
+\quad 2\SA{}+ & 6\treff, Einfärber \\
+2\SA & Einladung zum Vollspiel \\
+\quad 3\treff & min. \\
+\quad 3\coeur..4\treff & max., Kürze \\
+\quad 3\SA & max. \\
+Rest & Nonforcing \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\begin{convention}{2\coeur,2\pik}{2of} 10-16FP, 5OF-332.
+
+\begin{tabularx}{\columnwidth}{|lX|}
+\hline
+2\SA & Frage nach Double \\
+Rest & 100\% nonforcing \\
+\hline
+\end{tabularx}
+\end{convention}
+
+\end{multicols*}
+
+\end{document}
+%    \end{macrocode}
