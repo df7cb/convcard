@@ -8,6 +8,7 @@
 \usepackage{pslatex,graphicx}
 \usepackage{german,t1enc}
 \usepackage{xspace}
+\usepackage{bridge-i}
 %\pagestyle{empty}
 %\textwidth28cm
 %\textheight20cm
@@ -29,14 +30,14 @@
 %\hbadness=10000
 %%\usepackage{landscape}
 %
-\def\treff{\/$\clubsuit$\xspace}
-\def\karo{\/$\diamondsuit$\xspace}
-\def\coeur{\/$\heartsuit$\xspace}
-\def\pik{\/$\spadesuit$\xspace}
-\def\UF{$\clubsuit$/\karo\xspace}
-\def\OF{$\heartsuit$/$\spadesuit$\xspace}
+\def\treff{\Cl}
+\def\karo{\Di}
+\def\coeur{\He}
+\def\pik{\Sp}
+\def\UF{\Cl/\karo\xspace}
+\def\OF{\He/$\spadesuit$\xspace}
 \def\Farbe{$\clubsuit$-$\spadesuit$\xspace}
-\def\SA{\,SA\xspace}
+\def\SA{SA\xspace}
 \def\einhalb{$^{1\over2}$}
 \def\minus{$^-$}
 \def\plus{$^+$}
@@ -93,7 +94,8 @@
 \def\TwolineOpening#1#2#3{%
 	\put(#1,#2){
 		\put(0,0){\line(1,0){13}}
-		\put(0,.5){\line(1,0){13}}
+		%\put(0,.5){\line(1,0){13}}
+		\put(0,.5){\begin{minipage}[t]{13cm}\tiny\dotfill\end{minipage}}
 		\put(0,1){\line(1,0){13}}
 		\put(0,0){\line(0,1){1}}
 		\put(1.5,0){\line(0,1){1}}
@@ -106,8 +108,9 @@
 \def\ThreelineOpening#1#2#3{%
 	\put(#1,#2){
 		\put(0,0){\line(1,0){13}}
-		\put(0,1){\line(1,0){13}}
-		\put(1.5,0.5){\begin{minipage}[t]{11.5cm}\tiny\dotfill\end{minipage}}
+		%\put(0,1){\line(1,0){13}}
+		\put(0,1){\begin{minipage}[t]{13cm}\tiny\dotfill\end{minipage}}
+		%\put(1.5,0.5){\begin{minipage}[t]{11.5cm}\tiny\dotfill\end{minipage}}
 		\put(0,1.5){\line(1,0){13}}
 		\put(0,0){\line(0,1){1.5}}
 		\put(1.5,0){\line(0,1){1.5}}
