@@ -11,6 +11,8 @@
 \newenvironment{convention}[2]{{\bf \refstepcounter{conv}\label{#2}\theconv\ #1.}}{}
 \newcommand{\Ref}[1]{$^{\ref{#1}}$}
 
+\newcommand{\s}{$\leadsto$}
+
 \begin{document}
 
 \hspace{2.6mm}
@@ -144,7 +146,7 @@
      & 2\karo & 6-9 & zum Spielen (1/2) \\
      & 2\OF & & Partieforcing (3) \\
      & 2\SA & 8-9 & natürlich (2) \\
-     & 3\treff/\OF &  & Splinter (2) \\
+     & 3\treff/\OF &  & \karo-Autosplinter (2) \\
      & 3\karo &  & einladend (2) \\
 \hline
 \end{tabularx}
@@ -158,11 +160,11 @@ Weiterreizung nach Verteilungsfrage:
 2\karo & & 3er-\karo, nicht 4333-Vert. \\
        & 2\coeur & Frage nach \treff-Länge (2\pik: 5er-\treff, 2\SA: 4er-\treff) \\
 2\coeur & & 3424-Vert. \\
-2\pik & & 3424-Vert. \\
+2\pik & & 4324-Vert. \\
 2\SA & & bel. 4333-Vert. \\
      & 3\treff & Frage nach 4er (3\karo: 4er-\treff, 3\OF: 4er-\OF) \\
 3\treff & & 3325-Vert. (3\karo: KCB) \\
-3\karo & & 4432-Vert. \\
+3\karo & & 4423-Vert. \\
 \hline
 \end{tabularx}
 \end{convention}
@@ -179,24 +181,24 @@ Nach 1\SA-Rückgebot ist 2\treff\ Transfer \ra 2\karo\ und
 \emph{OF} & \emph{NF} & schwach & einladend & stark \\
 \hline
 \hline
-4OF  & ausg.  & pass  & 2\treff; 2\SA & 3\SA\\
+4OF  & ausg.  & pass  & 2\treff{}\s 2\SA & 3\SA\\
 \hline
-4OF  & 5\treff & 2\SA; p &
+4OF  & 5\treff & 2\SA{}\s p &
                 \emph{nicht zeigb.} &
-                nach 1\treff: 2\SA; 3\karo{}\\
-4OF  & 5\karo & 2\treff; p &
+                nach 1\treff: 2\SA{}\s 3\karo{}\\
+4OF  & 5\karo & 2\treff{}\s p &
                 2\karo{}\footnote{genau einladend, sonst Walsh} &
-                nach 1\karo: 2\SA; 3\karo{}\\
+                nach 1\karo: 2\SA{}\s 3\karo{}\\
 \hline
 5OF  & --    & 2OF  &
-                2\treff; 2OF{}\footnote{mindestens einladend} &
-                2\treff; 3\SA\\
-5OF  & 5$x$ & 2OF & 2\treff; 3$x$ & 3$x$\\
-5\pik & 4\coeur & 2\coeur & 2\treff; 2\coeur & 2\SA; 3\coeur\\
+                2\treff{}\s 2OF{}\footnote{mindestens einladend} &
+                2\treff{}\s 3\SA\\
+5OF  & 5$x$ & 2OF & 2\treff{}\s 3$x$ & 3$x$\\
+5\pik & 4\coeur & 2\coeur & 2\treff{}\s 2\coeur & 2\SA{}\s 3\coeur\\
 \hline
-6OF  & --    & 2OF  & 2\treff; 3OF & 3OF{}\footnote{leichtes Schlemm-Interesse}\\
+6OF  & --    & 2OF  & 2\treff{}\s 3OF & 3OF{}\footnote{leichtes Schlemm-Interesse}\\
       & Sngl  &       &             & 4$x$\\
-      & Chic  &       &             & 2\treff; 4$x$\\
+      & Chic  &       &             & 2\treff{}\s 4$x$\\
 \hline
 \end{tabularx}
 \centerline{\emph{OF = Oberfarbe des Antwortenden, NF = Nebenfarbe}}%
@@ -248,8 +250,8 @@ Danach weiter mit Cuebids, 4\SA ist KCB.
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
-1\OF & 3\treff & 9-11 & 4er-\OF \\
-     & 3\karo & 7-9 & 4er-\OF \\
+1\OF & 3\treff & 9$^+$-11 & 4er-\OF \\
+     & 3\karo & 7-9$^-$ & 4er-\OF \\
      & 3\OF & 0-6 & 4er-\OF \\
      & 4\OF & 0-9 & 5er-\OF \\
 \hline
@@ -344,7 +346,7 @@ Andere Gebote zeigen gute 3/4er-Anschlüsse und sind Cuebids.
 \hline
 3\SA    & 4\treff      & zum Spielen oder Ausbessern & \\
         & 4\OF         & zum Spielen & \\
-        & 5\UF/6\treff & zum Spielen oder Ausbessern & \\
+        & 5\treff{}/\karo{}/6\treff & zum Spielen oder Ausbessern & \\
         & 4\karo       & Kürzenfrage & \\
 4\OF    & & \OF-Kürze & \\
 4\SA    & & 7222-Verteilung & \\
@@ -357,7 +359,7 @@ Andere Gebote zeigen gute 3/4er-Anschlüsse und sind Cuebids.
 \begin{convention}{Schlemmkonventionen}{schlemm}
 $\circ$ DOPI-ROPI \\
 $\circ$ Mixed Cuebids, erstes 5er-Gebot zeigt Erstrundenkontrolle \\
-$\circ$ Roman KCB 14/30, rollend nach Trumpf-Q und platzierten K \\
+$\circ$ Roman KCB 14/30, rollend nach Trumpf-D und platzierten K \\
 $\circ$ Exclusion Keycard: ungewöhnlicher Sprung meist in 5er-Stufe \\
 $\circ$ Josephine: 5\SA\ im Sprung fragt Topfiguren (0/1/2/3)
 \end{convention}
@@ -372,6 +374,11 @@ $\circ$ Josephine: 5\SA\ im Sprung fragt Topfiguren (0/1/2/3)
 \hline
 \end{tabularx}
 \end{convention}
+
+% TODO:
+% Stayman/Smolen
+% 1karo-2treff
+% 4way-Transfer
 
 \end{multicols*}
 
