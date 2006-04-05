@@ -4,7 +4,6 @@
 \usepackage[a4paper, landscape, margin=5mm]{geometry}
 \usepackage{multicol,tabularx,amsthm}
 \renewcommand{\familydefault}{cmss}
-
 %\newtheorem{convention}{}
 \newcounter{conv}
 \setcounter{conv}{0}
@@ -12,6 +11,8 @@
 \newcommand{\Ref}[1]{$^{\ref{#1}}$}
 
 \newcommand{\s}{$\leadsto$}
+
+\newcommand{\se}{;\hspace{1.5ex}}
 
 \begin{document}
 
@@ -27,45 +28,41 @@
 \EinSAFuenferOFregel
 %\EinSAFuenferOFselten
 \Mindestlaengen{\large3}{\large3}{\large5}{\large5}
-\EinTreffBed{min. 3er, 12\pl FP}
-\EinTreffAnt{1\karo: Walsh\Ref{walsh}, 2\treff/2\SA/3\treff: Inverted, 2\karo: 5-5 \OF\ (2-5 FP),}
-	{schwache Sprünge}
-\EinKaroBed{min. 3er (4er au"ser bei 4432-Verteilung), 12\pl FP}
-\EinKaroAnt{2\karo/2\SA/3\karo: Inverted,}
-	{schwache Sprünge}
-\EinCoeurBed{min. 5er, 12\pl FP}
-\EinCoeurAnt{2\treff: 3er (10\pl FP), 2\karo: 5er (10\pl FP), 2\pik: 6er (5-8 FP), 2\SA: Partieforcing\Ref{majorgf},}
-	{Bergen-Hebungen (3\treff: 9$^+$-11 FP), 3\pik: bel. Chicane, 3\SA: \pik-Splinter}
-\EinPikBed{min. 5er, 12\pl FP}
-\EinPikAnt{2\treff: 2er (10\pl FP), 2\karo/\coeur: 5er (10\pl FP), 2\SA: Partieforcing\Ref{majorgf},}
-	{Bergen-Hebungen, 3\coeur: bel. Chicane, 3\SA: \coeur-Splinter}
-\EinSABed{ausgeglichen, 15-17 FP, 5er \OF\ möglich}
-\EinSAAnt{Stayman (0\pl FP), 4-Farben-Transfer\Ref{transfer} (0\pl FP)}
-	{4\treff: Gerber (04/1/2/3), 4\karo: 5-5\pl \OF}
+\EinTreffBed{mindestens 3er, 12\pl FP}
+\EinTreffAnt{1\karo = Walsh, verneint OF falls Revers nicht m"oglich\se 2\karo = 5-5 OF (2-5 FP)}
+	{Inverted Minors (2\SA = 2-5 FP)\se schwache Sprünge}
+\EinKaroBed{mindestens 3er (4er au"ser bei 4432-Verteilung), 12\pl FP}
+\EinKaroAnt{Inverted Minors (2\SA = 2-5 FP)\se schwache Sprünge}
+	{}
+\EinCoeurBed{mindestens 5er, 12\pl FP}
+\EinCoeurAnt{2\treff kann 3er sein\se 2\karo verspricht 5er\se 2\SA = Partieforcing\Ref{majorgf} mit gutem Anschluss}
+	{umgekehrte Bergen-Hebungen (3\treff 9$^+$-11 FP)\se 3\pik = bel. Chicane\se 3\SA = \pik-Splinter}
+\EinPikBed{mindestens 5er, 12\pl FP}
+\EinPikAnt{2\treff kann Double sein\se 3\coeur = bel. Chicane\se 3\SA = \coeur-Splinter}
+	{Rest wie nach 1\coeur{}-Er"offnung}
+\EinSABed{ausgeglichen, 15-17 FP, 5er-Oberfarbe möglich}
+\EinSAAnt{Stayman ab 0 FP\se 4-Farben-Transfer\Ref{transfer} ab 0 FP\se 2\SA = nat. Einladung\se 4\treff = Gerber}
+	{4\karo = beide OF 5-5 ohne Schlemm-Interesse}
 %
-\ZweiTreffBed{\karo-Weak Two,
-	bel. Semiforcing, \SA\ 22-23/26-27 FP}
+\ZweiTreffBed{\karo-Weak Two \textbf{oder} beliebiges SF \textbf{oder} PF in OF \textbf{oder} ausgeglichen 22-23/26-27 FP}
 	{}
-\ZweiTreffAnt{2\karo: Relais, 2\SA: Ogust, Rest: nat, forcierend}
-\ZweiKaroBed{\coeur-Weak Two,
-	bel. Partieforcing, \SA 24-25/28\pl FP}
+\ZweiTreffAnt{2\karo = Relais\se 2\SA = Ogust\se Rest = nat"urlich und forcing}
+\ZweiKaroBed{\coeur-Weak Two \textbf{oder}	beliebiges PF \textbf{oder} ausgeglichen 24-25/28\pl FP}
 	{}
-\ZweiKaroAnt{2\coeur: Relais, 2\SA: Ogust}
+\ZweiKaroAnt{2\coeur = Relais\se 2\SA = Ogust\se Rest = nat"urlich und forcing}
 \ZweiCoeurBed
-	{Zweifärber mit \coeur\ (6-10 FP, 5-5\pl \coeur/?, in 3. Hand auch 5-4)}
+	{Zweif"arber mit \coeur{}, mindestens 5-5, 6-10 FP\se in 3. Hand auch 5\coeur-4 m"oglich)}
 	{}
-\ZweiCoeurAnt{2\pik: Spielen oder Ausbessern, 2\SA: Frage nach 2. Farbe/Stärke\Ref{zweifaerber}}
+\ZweiCoeurAnt{2\pik = Spielen oder Ausbessern\se 2\SA = Frage nach 2. Farbe/Stärke\Ref{zweifaerber}}
 \ZweiPikBed{\pik-Weak Two}
 	{}
-\ZweiPikAnt{2\SA: Ogust}
-\ZweiSABed{ausgeglichen, 20-21F, 5er \OF\ möglich}
+\ZweiPikAnt{2\SA = Ogust}
+\ZweiSABed{ausgeglichen oder semi-ausgeglichen, 20-21 FP, 5er-OF möglich}
 	{}
-\ZweiSAAnt{3\treff: Puppet-Stayman\Ref{puppet} (4\pl FP), 3\karo/\coeur: Transf. \ra OF (4\pl FP),
-	4\karo: 5-5\pl in \OF\ (schwach)}
+\ZweiSAAnt{3\treff = Puppet-Stayman\Ref{puppet}\se 3\karo/\coeur = Transfers \ra OF\se 4\karo = 5-5\pl in OF (schwach)}
 %
-\BesondereZweierUndHoeher{3\UF: 7\pl \UF (5-10 FP, in NG/3. Hand 6er möglich),
-	3\SA: Gambling\Ref{gambling} (in 3./4. Hand zum Spielen)}
-	{4\UF: stehendes 7er-\OF\ mit Nebenwert, 4\SA: 6-5\pl in \UF}
+\BesondereZweierUndHoeher{3\UF = 7er (5-10 FP, je nach Pos./GL auch 6er möglich)\se 3\SA = Gambling\Ref{gambling}}
+	{4\SA: 6-5\pl Verteilung mit beiden Unterfarben}{}
 %
 \input{defense}
 %
@@ -77,6 +74,7 @@
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1ex}
+\setlength{\columnsep}{5ex}
 %\setlength{\columnseprule}{.4pt}
 
 \begin{multicols*}{3}
@@ -120,9 +118,9 @@ Weiterreizung nach Verteilungsfrage:
 \end{tabularx}
 \end{convention}
 
-\begin{convention}{Relais-Transfer}{relaistrf}
-Nach 1\SA-Rückgebot ist 2\treff\ Transfer \ra 2\karo\ und
-2\SA\ Transfer \ra 3\treff.
+\begin{convention}{Schema nach 1\SA R"uckgebot}{relaistrf}
+Nach 1\SA-Rückgebot ist 2\treff Puppet f"ur 2\karo und 
+2\SA Puppet f"ur 3\treff.
 
 \begin{minipage}{\columnwidth}
 \begin{tabularx}{\columnwidth}{|c|c|l|l|X|}
@@ -136,10 +134,10 @@ Nach 1\SA-Rückgebot ist 2\treff\ Transfer \ra 2\karo\ und
 \hline
 4OF  & 5\treff & 2\SA{}\s p &
                 \emph{nicht zeigb.} &
-                nach 1\treff: 2\SA{}\s 3\karo{}\\
+                \mbox{nach 1\treff:} 2\SA{}\s 3\karo{}\\
 4OF  & 5\karo & 2\treff{}\s p &
                 2\karo{}\footnote{genau einladend, sonst Walsh} &
-                nach 1\karo: 2\SA{}\s 3\karo{}\\
+                \mbox{nach 1\karo:} 2\SA{}\s 3\karo{}\\
 \hline
 5OF  & --    & 2OF  &
                 2\treff{}\s 2OF{}\footnote{mindestens einladend} &
@@ -174,8 +172,7 @@ Nach 1\SA-Rückgebot ist 2\treff\ Transfer \ra 2\karo\ und
 \vfill
 \columnbreak
 
-\begin{convention}{Partieforcing}{majorgf}
-Weiterreizung nach 1\OF-2\SA:
+\begin{convention}{2\SA{}-Antwort auf OF-Er"offnung}{majorgf}
 
 \begin{tabularx}{\columnwidth}{|lllX|}
 \hline
@@ -196,7 +193,7 @@ Weiterreizung nach 1\OF-2\SA:
 \end{tabularx}
 Danach weiter mit Cuebids, 4\SA ist KCB.
 \end{convention}
-
+\vfill
 %\begin{convention}{Bergen}{bergen} ~
 %
 %\begin{tabularx}{\columnwidth}{|lllX|}
@@ -209,14 +206,11 @@ Danach weiter mit Cuebids, 4\SA ist KCB.
 %\end{tabularx}
 %\end{convention}
 
-\begin{convention}{Jacoby-Transfer}{transfer}
-Nach Transfer auf OF reizt der Eröffner mit 4er-Anschluss und Maximum Double
-(2\SA: Transferfarbe/4333), mit 4er-Anschl. und Minimum 3 in Farbe.
-
-%Nach Transfer auf UF zeigt  der Eröffner mit 2\SA \karo-Präferenz, mit 3\treff
-%\treff-Präferenz.
+\begin{convention}{Super-Accepts nach Transfer}{transfer}
+Super-Accepts nach OF-Transfer (zeigt mindestens 4er-Anschluss): 3OF = Minimum,
+neue Farbe = kleines Double und Maximum, 2\SA = Maximum, Double in Transferfarbe oder 4333
 \end{convention}
-
+\vfill
 %\begin{convention}{Ogust}{ogust}
 %Auch nach schw. Sprüngen in 2er-Stufe.
 %Nächste freie Farbe ist erst Kürzenfrage, danach PKCA\Ref{pkca}.
@@ -234,9 +228,7 @@ Nach Transfer auf OF reizt der Eröffner mit 4er-Anschluss und Maximum Double
 %
 %\end{convention}
 
-\begin{convention}{Zweifärber}{zweifaerber}
-Danach ist nächste freie Farbe Kürzenfrage. Die 1./2. freie Farbe ist dann
-PKCA\Ref{pkca} für die niedrige/hohe Farbe.
+\begin{convention}{2\coeur-Er"offnung = \coeur{}$+$?}{zweifaerber}
 
 \begin{tabularx}{\columnwidth}{|llllX|}
 \hline
@@ -252,11 +244,10 @@ PKCA\Ref{pkca} für die niedrige/hohe Farbe.
 3\SA    &      & 9-10 & 5-5 \coeur/\karo & \\
 \hline
 \end{tabularx}
+
+Danach fragt die n"achste Stufe (au"ser Trumpf und 3\SA) nach K"urze.
 \end{convention}
-
 \vfill
-\columnbreak
-
 \begin{convention}{Preempt Keycard Ask (PKCA)}{pkca}
 
 Nach allen schwachen Eröffungen und Sprüngen, meist mit 4\treff\ gestellt.
@@ -272,6 +263,9 @@ Rollend:
 \hline
 \end{tabularx}
 \end{convention}
+
+\vfill
+\columnbreak
 
 \begin{convention}{Puppet-Stayman}{puppet} ~
 
@@ -290,6 +284,7 @@ Rollend:
 Transfer-Annahme zeigt ein Double, 3\SA\ einen 3er-Anschluss.
 Andere Gebote zeigen gute 3/4er-Anschlüsse und sind Cuebids.
 \end{convention}
+\vfill
 
 \begin{convention}{Gambling}{gambling} ~
 
@@ -306,14 +301,18 @@ Andere Gebote zeigen gute 3/4er-Anschlüsse und sind Cuebids.
 \hline
 \end{tabularx}
 \end{convention}
+\vfill
 
 \begin{convention}{Schlemmkonventionen}{schlemm}
-$\circ$ DOPI-ROPI \\
-$\circ$ Mixed Cuebids, erstes 5er-Gebot zeigt Erstrundenkontrolle \\
-$\circ$ Roman KCB 14/30, rollend nach Trumpf-D und platzierten K \\
-$\circ$ Exclusion Keycard: ungewöhnlicher Sprung meist in 5er-Stufe \\
-$\circ$ Josephine: 5\SA\ im Sprung fragt Topfiguren (0/1/2/3)
+
+\begin{itemize}
+\item DOPI-ROPI
+\item Mixed Cuebids
+\item RKCB 14/30/2/2+D
+\item Exclusion Blackwood
+\end{itemize}
 \end{convention}
+\vfill
 
 \begin{convention}{Sonstiges}{sonstiges} ~
 
