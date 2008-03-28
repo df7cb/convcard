@@ -1,11 +1,14 @@
 DVIPSFLAGS=-t landscape
 
-PS = cc_walsh.ps cc_inv_bergen.ps cc_basic.ps cc_forumd.ps cc_moscito05.ps cc_narnja.ps cc_lang_berg.ps
-PDF = $(patsubst %.ps,%.pdf,$(PS))
+CC = $(wildcard cc_*.tex)
+PS = $(patsubst %.tex,%.ps,$(CC))
+PDF = $(patsubst %.tex,%.pdf,$(CC))
 
 #quick: cc_moscito05.dvi
 
 all: $(PS) $(PDF)
+ps: $(PS)
+pdf: $(PDF)
 
 cc_walsh.dvi: miniDBV2.sty defense.tex
 cc_inv_bergen.dvi: miniDBV.sty
