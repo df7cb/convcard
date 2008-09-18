@@ -1,6 +1,6 @@
 %    \begin{macrocode}
 \documentclass{article}
-\usepackage{miniDBV,amsthm}
+\usepackage{miniDBV2,amsthm}
 \usepackage[a4paper, landscape, margin=5mm]{geometry}
 \usepackage{multicol,tabularx}
 \renewcommand{\familydefault}{cmss}
@@ -13,41 +13,44 @@
 \beginMinikarteNeu
 	{\large Kurt Lang}{\large Christoph Berg}
 %
-\Grundsystem{\large 5er Oberfarben}
-\EinSA{\large15-17F}{\large15-17F}
+\Grundsystem{\large 5er Oberfarben (Better Minor)}
+\EinSA{\large15-17}{\large15-17}
 %\EinSAkleinesSingle
 %\EinSATopSingle
 %\EinSAFuenferOFregel
 \EinSAFuenferOFselten
 \Mindestlaengen{\large3}{\large3}{\large5}{\large5}
 \EinTreffBed{3+ \treff}
-\EinTreffAnt{Walsh-Style, nat., Inverted Minors
-	}
+\EinTreffAnt{Inverted Minors}
+	{}
 \EinKaroBed{3+ (meist 4+) \karo}
-\EinKaroAnt{Nat., Inverted Minors}
+\EinKaroAnt{Inverted Minors}
+	{}
 \EinCoeurBed{5+ \coeur}
-\EinCoeurAnt{1\SA{} 6-9F, 2\SA{} Jacoby (PF mit gutem Fit, danach nat.), 3\treff/3\karo{} Bergen, 3\coeur{} sperrend
-	}
+\EinCoeurAnt{2\SA{} Jacoby (PF, guter Fit, danach Werte/2. Farbe, Cuebids)}
+	{3\treff/3\karo{} Bergen, 3\coeur/4\coeur{} sperrend}
 \EinPikBed{5+ \pik}
 \EinPikAnt{dito
 	}
-\EinSABed{ausgeglichen, 15-17F}
-\EinSAAnt{2\treff{} Stayman oder 8-10F einl., 2\karo-2\SA{} Transfer,
-	3x Schlemmint., 4\treff{} Gerber (04/1/2/3)}
+		{}
+\EinSABed{nat., auch 14 gute}
+\EinSAAnt{2\treff{} Stayman oder {\bf 8-10F einl.}, Transfers
+	(2\pik{} = \treff, 2\SA{} = \karo), alles ab 0F}
+	{3x Schlemmint., 4\treff{} Assfrage}
 %
 \ZweiTreffBed
-	{Benjamin: bel. Semiforcing (meist 7+er-Farbe)}
-	{SA\ 22-23F, \SA\ 26-27F}
-\ZweiTreffAnt{2\treff{} Relais, Rest nat}
+	{Benjamin: bel. Semiforcing (meist mit langer Farbe), starke SA}
+	{}
+\ZweiTreffAnt{2\karo{} Relais, Rest nat}
 \ZweiKaroBed
-	{Benjamin: bel. Partieforcing}
-	{SA\ 24-25F, \SA\ 28+F}
+	{Benjamin: bel. Partieforcing, starke SA}
+	{}
 \ZweiKaroAnt{2\coeur{} Relais, Rest nat}
 \ZweiCoeurBed
-	{Weak Two in \coeur\ (4-10F)}
+	{Weak Two in \coeur\ (ca. 4-10F)}
 	{}
 \ZweiCoeurAnt{2\SA{} Ogust (min-min-max-max), RONF}
-\ZweiPikBed{Weak Two in \pik\ (4-10F)}
+\ZweiPikBed{Weak Two in \pik\ (ca. 4-10F)}
 	{}
 \ZweiPikAnt{dito}
 \ZweiSABed{semiausgeglichen, 20-21F}
@@ -55,28 +58,30 @@
 \ZweiSAAnt{3\treff{} Puppet-Stayman, 3\karo/3\coeur{} Transfer
 	}
 %
-\BesondereZweierUndHoeher{3\SA: Gambling (stehende 7er \UF{} ohne Nebenwerte)}
+\BesondereZweierUndHoeher{3\SA: Gambling (stehende 7er-UF ohne Nebenwerte)}
 	{4\SA: 6-5+ in UF}
 %
-\InfoKontraAb{12F}
+\InfoKontraAb{12}
 \InfoKontraOF
 %\InfoKontraWerte
-\FarbGegenEiner{8}{15}
-\FarbGegenZweier{10}{16}
+\FarbGegenEiner{8}{16}
+\FarbGegenZweier{10}{17}
 \StilDerGegenreizung{kompetitiv}
 \Weiterreizung{Farbwechsel nonforcing}
-\EinSAGegen{poln. SA}{11-14F}{4er OF, 5+ UF, 10-15F; in 4. Hand nat}
-\SprungGegen{Weak Jumps: schwach, sperrend}
-	{Michaels Präzis ("Uberruf/2\SA/3\treff: Zweif"arber, schwach oder 15+F)}
+\EinSAGegen{poln. ab 8}{11-14F}
+	{Poln. SA: 4er OF, längere UF}
+\SprungGegen{Weak Jumps}
+	{Michaels (Überruf = \pik{} + weitere, 2\SA{} = untere)}
 %
 \GegenEinSA
 	{Multi-Landy: 2\treff: beide OF, 2\karo: OF-Einfärber, 2\OF: 5-4+ OF-UF, }
 	{\hphantom{Multi-Landy:} 2\SA: beide UF, 3\UF: UF-Einfärber}
-	{\hphantom{Multi-Landy:} X: 5-4 in UF-OF (gegen schwachen SA: Strafe)}
+	{\hphantom{Multi-Landy:} X ist Strafe}
 \AndereGegenreizungen
 	%{gegen 2\karo-Multi: X: Info-Kontra gegen \coeur-Weak Two}
-	{Lebensohl nach Info-X; 2\SA\ als Zweifärber in 4. Hand und Good-Bad NT}
+	%{Lebensohl nach Info-X; 2\SA\ als Zweifärber in 4. Hand und Good-Bad NT}
 	{gegen starke \treff: 1x nat, 2x/3x wie gegen 1\SA}
+	{}
 	{}
 %
 \SequenzHoechste{}
@@ -97,11 +102,31 @@
 %\GeradeSonstiges{}
 \Abwuerfe{Lavinthal}
 \MarkierungenSA{}
-	{}
+	{\hspace{87mm} Vereinbarungen im Innenteil $\rightarrow$}
 %
-\Datum{\today}
+\Datum{\footnotesize \today}
 %
 \endMinikarteNeu
+
+\begin{twocolumn}
+
+\section*{Vereinbarungen}
+
+\begin{itemize}
+\item Alle Punktspannen, insbesondere bei Gegenreizungen und Sperreröffnungen,
+ können regelmä\ss ig auch etwas schwächer sein
+\item Supportkontra, Negativkontras, 3. (Unter-)Farbe forcing
+\item Lebensohl, selten auch Good-Bad-2NT
+\item Assfrage ist generell RKCB 30/41, meist 4\SA; DOPI-ROPI
+\item 4 UF ist Assfrage in UF wenn es keine sperrende/kompetitive Situation ist
+ (1\treff-4\treff{} ist sperrend, 1\treff-2\treff-3\treff-4\treff{} ist Assfrage)
+\item 2/1 ist nach Zwischenreizung nonforcing
+\item 1\karo-1\pik-2\karo-3\pik{} ist einladend
+\item Nach 2\SA-3\treff-3\karo{} zeigt 4\treff{} beide OF 4-4
+\item Nach 1OF und Zwischenreizung ist 2SA nat, Überruf ist mind. einladend
+\end{itemize}
+
+\end{twocolumn}
 
 \end{document}
 %    \end{macrocode}
