@@ -22,6 +22,8 @@ cc_moscito05.dvi: miniDBV2.sty defense.tex
 #	dvips $(DVIPSFLAGS) -o - $< | pstops '2:0,1U(21cm,29.7cm)' > $@
 	dvips $(DVIPSFLAGS) -o - $< > $@
 
+cc_kantner_berg.pdf: miniDBVzocker.sty
+
 %.pdf: %.tex %.dvi
 	pdflatex $<
 

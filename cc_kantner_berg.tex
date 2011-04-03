@@ -1,6 +1,6 @@
 %    \begin{macrocode}
 \documentclass{article}
-\usepackage{miniDBV2,amsthm}
+\usepackage{miniDBVzocker,amsthm}
 \usepackage[a4paper, landscape, margin=5mm]{geometry}
 \usepackage{multicol,tabularx}
 \renewcommand{\familydefault}{cmss}
@@ -9,11 +9,12 @@
 \newtheorem{convention}{}
 \newcommand{\Ref}[1]{$^{\ref{#1}}$}
 
+\newcommand{\Karte}[2]{
 \hspace{2.6mm}
 \beginMinikarteNeu
-	{\large Henning Kantner}{\large Christoph Berg}
+	{\large #1}{\large #2}
 %
-\Grundsystem{\large 5er Oberfarben (Rieneck Standard)}
+\Grundsystem{\large Rieneck Standard mod. (5er Oberfarben)}
 \EinSA{\large15-17}{\large15-17}
 %\EinSAkleinesSingle
 %\EinSATopSingle
@@ -38,18 +39,18 @@
 	{3\karo/\coeur/\pik Schlemmint., 4\treff{} Assfrage}
 %
 \ZweiTreffBed
-	{Benjamin: bel. Semiforcing (meist mit langer Farbe), starke SA}
+	{bel. Semi/Partieforcing, starke SA 22+}
 	{}
 \ZweiTreffAnt{2\karo{} Relais, Rest nat}
 \ZweiKaroBed
-	{Benjamin: bel. Partieforcing, starke SA}
+	{Weak Two in \karo\ (ca. 4-10F)}
 	{}
-\ZweiKaroAnt{2\coeur{} Relais, Rest nat}
+\ZweiKaroAnt{2\SA{} Ogust (min-min-max-max); neue Farbe forcing}
 \ZweiCoeurBed
-	{Weak Two in \coeur\ (ca. 4-10F)}
+	{Weak Two in \coeur}
 	{}
-\ZweiCoeurAnt{2\SA{} Ogust (min-min-max-max); neue Farbe forcing}
-\ZweiPikBed{Weak Two in \pik\ (ca. 4-10F)}
+\ZweiCoeurAnt{dito}
+\ZweiPikBed{Weak Two in \pik}
 	{}
 \ZweiPikAnt{dito}
 \ZweiSABed{semiausgeglichen, 20-21F}
@@ -105,7 +106,7 @@
 %
 \endMinikarteNeu
 
-\begin{twocolumn}
+%\begin{twocolumn}
 
 \section*{Vereinbarungen}
 
@@ -128,7 +129,15 @@
  \end{itemize}
 \end{itemize}
 
-\end{twocolumn}
+%\end{twocolumn}
+}
+
+\newcommand{\Doppelkarte}[2]{
+\Karte{#1}{#2}
+\Karte{#2}{#1}
+}
+
+\Doppelkarte{Henning Kantner}{Christoph Berg}
 
 \end{document}
 %    \end{macrocode}

@@ -1,0 +1,361 @@
+%   Deutsche Mini-Konventionskarte
+%   made by Thomas W. R. Hof
+%   bridge@twrh.de
+%   diese Datei ist frei verfüg- und nutzbar gemäß GPL...
+%    \begin{macrocode}
+%\usepackage{color,pslatex}
+%\definecolor{background}{gray}{0.75}
+\usepackage{pslatex,graphicx}
+\usepackage{german,t1enc}
+\usepackage{xspace}
+\usepackage{bridge-i}
+%\pagestyle{empty}
+%\textwidth28cm
+%\textheight20cm
+%\def\settingslatex{%
+%	\topmargin-4cm
+%	\oddsidemargin-16mm
+%}
+%\def\settingspdf{%
+%	\topmargin-3.5cm
+%	\oddsidemargin-11mm
+%	\pdfpagewidth=29.7cm
+%	\pdfpageheight=21cm
+%}
+%\expandafter\ifx\csname pdfoutput\endcsname\relax\settingslatex\else\settingspdf\fi
+%\evensidemargin\oddsidemargin
+%\parindent0pt
+\unitlength1cm
+\frenchspacing
+%\hbadness=10000
+%%\usepackage{landscape}
+%
+\def\treff{\Cl}
+\def\karo{\Di}
+\def\coeur{\He}
+\def\pik{\Sp}
+\def\UF{\Cl/\karo\xspace}
+\def\OF{\He/$\spadesuit$\xspace}
+\def\Farbe{$\clubsuit$-$\spadesuit$\xspace}
+\def\SA{SA\xspace}
+\def\einhalb{$^{1\over2}$}
+\def\minus{$^-$}
+\def\plus{$^+$}
+\def\ra{$\rightarrow$\xspace}
+\def\pl{$\uparrow$\xspace}
+\def\Baron{{\sc Baron\,}}
+\def\Benjamin{{\sc Benjamin\,}}
+\def\Bergen{{\sc Bergen Raises\,}}
+\def\Cappelletti{{\sc Cappelletti\,}}
+\def\Capelletti{\Cappelletti}
+\def\Crowhurst{\Cappelletti}
+\def\Dont{{\sc Dont\,}}
+\def\Gambling{{\sc Gambling\,}}
+\def\Gromoeller{{\sc Grom"oller\,}}
+\def\Hofstein{{\sc Hofstein\,}}
+\def\Lavinthal{{\sc Lavinthal\,}}
+\def\Lebensohl{{\sc Lebensohl\,}}
+\def\Rothstone{{\sc Rothstone (unusual 2NT)\,}}
+\def\Schroeder{{\sc Schroeder\,}}
+\def\Stayman{{\sc Stayman\,}}
+\def\Transfer{{\sc Transfer\,}}
+\def\Truscott{{\sc Truscott\,}}
+%
+\def\centeredtext#1#2{\hbox to #1{\hss{#2}\hss}}	% Text #2 zentrieren auf Breite #1
+\newlength{\BoldBreite}
+\def\Bold#1{\settowidth{\BoldBreite}{#1}{#1}\hspace{-\BoldBreite}\hspace{.5pt}{#1}}% Font-unabh. Fettdruck
+\def\Boldline#1{\linethickness{.5mm}#1\linethickness{1pt}}	% dicke Linie (1/2 mm dick)
+\def\SquareBox#1{%			Kasten zeichnen mit Kantenl"ange #1
+	\put(0,0){\line(1,0){#1}}
+	\put(0,#1){\line(1,0){#1}}
+	\put(0,0){\line(0,1){#1}}
+	\put(#1,0){\line(0,1){#1}}
+}
+\def\RectBox#1#2{%			Kasten zeichnen mit Kanten #1 + #2
+	\put(0,0){\line(1,0){#1}}
+	\put(0,#2){\line(1,0){#1}}
+	\put(0,0){\line(0,1){#2}}
+	\put(#1,0){\line(0,1){#2}}
+}
+\def\Kreuz{\BigfontBold{X}}	% K"astchen ankreuzen
+\def\Entryfont#1{{\sffamily\small\itshape #1}}
+\def\EntryfontBold#1{{\sffamily\small\itshape\bfseries #1}}
+\def\Fieldfont#1{{\sffamily #1}}
+\def\FieldfontBold#1{{\sffamily\bfseries #1}}
+\def\Bigfont#1{{\sffamily\large #1}}
+\def\BigfontBold#1{{\sffamily\large\bfseries #1}}
+\def\Headerfont#1{{\sffamily\Large #1}}
+\def\HeaderfontBold#1{{\sffamily\Large\bfseries #1}}
+\def\DBVfont#1{{\sffamily\huge #1}}
+\def\DBVfontBold#1{{\sffamily\huge\bfseries #1}}
+\newfont{\Normalfont}{cmss8 scaled 1000}
+\newfont{\Minifont}{cmr5 scaled 1000}
+%
+\def\TwolineOpening#1#2#3{%
+	\put(#1,#2){
+		\put(0,0){\line(1,0){13}}
+		%\put(0,.5){\line(1,0){13}}
+		\put(0,.5){\begin{minipage}[t]{13cm}\tiny\dotfill\end{minipage}}
+		\put(0,1){\line(1,0){13}}
+		\put(0,0){\line(0,1){1}}
+		\put(1.5,0){\line(0,1){1}}
+		\put(13,0){\line(0,1){1}}
+		\put(.1,.1){\BigfontBold{Antw.}}
+		\put(.1,.6){\BigfontBold{#3}}
+	}
+}
+%
+\def\ThreelineOpening#1#2#3{%
+	\put(#1,#2){
+		\put(0,0){\line(1,0){13}}
+		%\put(0,1){\line(1,0){13}}
+		\put(0,1){\begin{minipage}[t]{13cm}\tiny\dotfill\end{minipage}}
+		%\put(1.5,0.5){\begin{minipage}[t]{11.5cm}\tiny\dotfill\end{minipage}}
+		\put(0,1.5){\line(1,0){13}}
+		\put(0,0){\line(0,1){1.5}}
+		\put(1.5,0){\line(0,1){1.5}}
+		\put(13,0){\line(0,1){1.5}}
+		\put(.1,.6){\BigfontBold{Antw.}}
+		\put(.1,1.1){\BigfontBold{#3}}
+	}
+}
+%
+\def\OneLine#1#2{%
+	\put(#1,#2){
+		\put(0,0){\line(1,0){13}}
+		\put(0,.5){\line(1,0){13}}
+		\put(0,0){\line(0,1){.5}}
+		\put(13,0){\line(0,1){.5}}
+	}
+}
+%
+\def\TwoLines#1#2{%
+	\put(#1,#2){
+		\put(0,0){\line(1,0){13}}
+		\put(0,.5){\begin{minipage}[t]{13cm}\tiny\dotfill\end{minipage}}
+		\put(0,1){\line(1,0){13}}
+		\put(0,0){\line(0,1){1}}
+		\put(13,0){\line(0,1){1}}
+	}
+}
+%
+\def\ThreeLines#1#2{%
+	\put(#1,#2){
+		\put(0,0){\line(1,0){13}}
+		\put(0,.5){\begin{minipage}[t]{13cm}\tiny\dotfill\end{minipage}}
+		\put(0,1){\begin{minipage}[t]{13cm}\tiny\dotfill\end{minipage}}
+		\put(0,1.5){\line(1,0){13}}
+		\put(0,0){\line(0,1){1.5}}
+		\put(13,0){\line(0,1){1.5}}
+	}
+}
+%
+\def\Grundsystem#1{\put(3.1,17.8){\FieldfontBold{#1}}}
+%
+\def\EinSA#1#2{\put(6.1,17.2){\FieldfontBold{#1}}\put(10.6,17.2){\FieldfontBold{#2}}}
+\def\EinSAkleinesSingle{\put(7.6,16.6){\Kreuz}}
+\def\EinSATopSingle{\put(12.1,16.6){\Kreuz}}
+\def\EinSAFuenferOFregel{\put(7.6,16){\Kreuz}}
+\def\EinSAFuenferOFselten{\put(12.1,16){\Kreuz}}
+%
+\def\Mindestlaengen#1#2#3#4{%
+	\put(7.6,15.1){\FieldfontBold{#1}}
+	\put(9.1,15.1){\FieldfontBold{#2}}
+	\put(10.6,15.1){\FieldfontBold{#3}}
+	\put(12.1,15.1){\FieldfontBold{#4}}
+}
+%
+\def\EinTreffBed#1{\put(1.6,14.5){\Entryfont{#1}}}
+\def\EinTreffAnt#1#2{\put(1.6,14){\Entryfont{#1}}\put(1.6,13.5){\Entryfont{#2}}}
+\def\EinKaroBed#1{\put(1.6,13.0){\Entryfont{#1}}}
+\def\EinKaroAnt#1#2{\put(1.6,12.5){\Entryfont{#1}}\put(1.6,12.0){\Entryfont{#2}}}
+\def\EinCoeurBed#1{\put(1.6,11.5){\Entryfont{#1}}}
+\def\EinCoeurAnt#1#2{\put(1.6,11.0){\Entryfont{#1}}\put(1.6,10.5){\Entryfont{#2}}}
+\def\EinPikBed#1{\put(1.6,10.0){\Entryfont{#1}}}
+\def\EinPikAnt#1#2{\put(1.6,9.5){\Entryfont{#1}}\put(1.6,9.0){\Entryfont{#2}}}
+\def\EinSABed#1{\put(1.6,8.5){\Entryfont{#1}}}
+\def\EinSAAnt#1#2{\put(1.6,8.0){\Entryfont{#1}}\put(1.6,7.5){\Entryfont{#2}}}
+%
+\def\ZweiTreffBed#1#2{\put(1.6,6.3){\Entryfont{#1}}}
+\def\ZweiTreffAnt#1{\put(1.6,5.8){\Entryfont{#1}}}
+\def\ZweiKaroBed#1#2{\put(1.6,5.3){\Entryfont{#1}}}
+\def\ZweiKaroAnt#1{\put(1.6,4.8){\Entryfont{#1}}}
+\def\ZweiCoeurBed#1#2{\put(1.6,4.3){\Entryfont{#1}}}
+\def\ZweiCoeurAnt#1{\put(1.6,3.8){\Entryfont{#1}}}
+\def\ZweiPikBed#1#2{\put(1.6,3.3){\Entryfont{#1}}}
+\def\ZweiPikAnt#1{\put(1.6,2.8){\Entryfont{#1}}}
+\def\ZweiSABed#1#2{\put(1.6,2.3){\Entryfont{#1}}}
+\def\ZweiSAAnt#1{\put(1.6,1.8){\Entryfont{#1}}}
+%
+\def\BesondereZweierUndHoeher#1#2{%
+	\put(.1,.6){\Entryfont{#1}}
+	\put(.1,.1){\Entryfont{#2}}
+}
+%
+\def\InfoKontraAb#1{\put(18.3,18.5){\FieldfontBold{#1}}}
+\def\InfoKontraOF{\put(23,18.5){\Kreuz}}
+\def\InfoKontraWerte{\put(26.1,18.5){\Kreuz}}
+\def\FarbGegenEiner#1#2{\put(20.1,17.9){\FieldfontBold{#1}}\put(22.1,17.9){\FieldfontBold{#2}}}
+\def\FarbGegenZweier#1#2{\put(20.1,17.3){\FieldfontBold{#1}}\put(22.1,17.3){\FieldfontBold{#2}}}
+\def\StilDerGegenreizung#1{\put(18.1,16.7){\Entryfont{#1}}}
+\def\Weiterreizung#1{\put(18.1,16.1){\Entryfont{#1}}}
+\def\EinSAGegen#1#2#3{\put(21.3,15.5){\FieldfontBold{#1}}\put(25.1,15.5){\FieldfontBold{#2}}\put(14.1,14.9){\Entryfont{#3}}}
+\def\SprungGegen#1#2{\put(18.1,14.3){\Entryfont{#1}}\put(14.1,13.7){\Entryfont{#2}}}
+%
+\def\GegenEinSA#1#2#3{%
+	\put(14.1,12.6){\Entryfont{#1}}
+	\put(14.1,12.1){\Entryfont{#2}}
+	\put(14.1,11.6){\Entryfont{#3}}
+}
+\def\AndereGegenreizungen#1#2#3{%
+	\put(14.1,10.5){\Entryfont{#1}}
+	\put(14.1,10){\Entryfont{#2}}
+	\put(14.1,9.5){\Entryfont{#3}}
+}
+%
+\def\SequenzHoechste#1{\put(14.6,8.3){\Kreuz}\put(24.1,8.3){\Entryfont{#1}}}
+\def\SequenzZweite#1{\put(14.6,7.7){\Kreuz}\put(24.1,7.7){\Entryfont{#1}}}
+\def\InnereSequenzHoechste#1{\put(14.6,7.1){\Kreuz}\put(24.1,7.1){\Entryfont{#1}}}
+\def\InnereSequenzZweite#1{\put(14.6,6.5){\Kreuz}\put(24.1,6.5){\Entryfont{#1}}}
+\def\AusspielDritteFuenfte{\put(15.6,5.8){\Kreuz}}
+\def\AusspielVierte{\put(18.1,5.8){\Kreuz}}
+\def\AusspielZweiteVierte{\put(20.1,5.8){\Kreuz}}
+\def\AusspielSonstiges#1{\put(22.6,5.8){\Entryfont{#1}}}
+\def\AusspielSA#1#2{\put(14.1,4.7){\Entryfont{#1}}\put(14.1,4.2){\Entryfont{#2}}}
+%
+\def\PositivHoch{\put(18.1,3.1){\Kreuz}}
+\def\PositivNiedrig{\put(20.2,3.1){\Kreuz}}
+\def\PositivSonstiges#1{\put(23.1,3.1){\Entryfont{#1}}}
+\def\GeradeHoch{\put(18.1,2.2){\Kreuz}}
+\def\GeradeNiedrig{\put(20.2,2.2){\Kreuz}}
+\def\GeradeSonstiges#1{\put(23.1,2.2){\Entryfont{#1}}}
+\def\Abwuerfe#1{\put(16.1,1.6){\Entryfont{#1}}}
+\def\MarkierungenSA#1#2{\put(14.1,.6){\Entryfont{#1}}\put(14.1,.1){\Entryfont{#2}}}
+%
+\def\Datum#1{\put(27.2,0.0){\rotatebox{90}{\Entryfont{#1}}}}
+%
+\def\beginMinikarteNeu#1#2{%
+\begin{picture}(27.2,20)
+%	\put(0,19){\RectBox{13}{.7}}
+%	\put(0,19.1){\colorbox{background}{\begin{minipage}[t]{12.8cm}\DBVfontBold{Minikonventionskarte}\hfill\HeaderfontBold{angelehnt an DBV-Muster}\end{minipage}}}
+	\put(0,19.1){\begin{minipage}[t]{12.8cm}\centerline{\DBVfontBold{Minikonventionskarte}}\end{minipage}}%\hfill\HeaderfontBold{angelehnt an DBV-Muster}\end{minipage}}
+
+	\put(0,18.3){\put(0,.1){\Fieldfont{Linker Zocker}}\put(2.3,0){\RectBox{4}{.5}}\put(2.4,.1){\FieldfontBold{#1}}}
+	\put(6.7,18.3){\put(0,.1){\Fieldfont{Rechter Zocker}}\put(2.3,0){\RectBox{4}{.5}}\put(2.4,.1){\FieldfontBold{#2}}}
+
+	\put(0,17.8){\HeaderfontBold{Grundsystem}}\put(3,17.7){\RectBox{10}{.5}}
+
+	\put(0,17.1){\HeaderfontBold{1\SA-Eröffnung}}
+		\put(3.8,17.2){\Fieldfont{in Nichtgefahr}}\put(6,17.1){\RectBox{2}{.5}}
+		\put(9,17.2){\Fieldfont{in Gefahr}}\put(10.5,17.1){\RectBox{2}{.5}}
+
+		\put(4.1,16.6){\Fieldfont{kleines Single möglich}}\put(7.5,16.5){\SquareBox{.5}}
+		\put(8.5,16.6){\Fieldfont{Single Topfigur möglich}}\put(12,16.5){\SquareBox{.5}}
+
+%		\put(1,16){\Fieldfont{5er Oberfarbe enthalten}}
+			\put(3.5,16){\Fieldfont{5er-Oberfarbe regelmässig}}\put(7.5,15.9){\SquareBox{.5}}
+			\put(8.9,16){\Fieldfont{5er-Oberfarbe selten}}\put(12,15.9){\SquareBox{.5}}
+
+	\put(0,15.1){\HeaderfontBold{1er-Eröffnungen}}
+		\put(4.5,15.1){\Fieldfont{Mindestlänge}}
+			\put(6.8,15.1){\FieldfontBold{1 \treff}}\put(7.5,15){\SquareBox{.5}}
+			\put(8.3,15.1){\FieldfontBold{1 \karo}}\put(9,15){\SquareBox{.5}}
+			\put(9.8,15.1){\FieldfontBold{1 \coeur}}\put(10.5,15){\SquareBox{.5}}
+			\put(11.3,15.1){\FieldfontBold{1 \pik}}\put(12,15){\SquareBox{.5}}
+
+	\ThreelineOpening{0}{13.4}{1 \treff}
+	\ThreelineOpening{0}{11.9}{1 \karo}
+	\ThreelineOpening{0}{10.4}{1 \coeur}
+	\ThreelineOpening{0}{8.9}{1 \pik}
+	\ThreelineOpening{0}{7.4}{1 \SA}
+
+	\put(0,6.9){\HeaderfontBold{2er-Eröffnungen}}
+
+	\TwolineOpening{0}{5.7}{2 \treff}
+	\TwolineOpening{0}{4.7}{2 \karo}
+	\TwolineOpening{0}{3.7}{2 \coeur}
+	\TwolineOpening{0}{2.7}{2 \pik}
+	\TwolineOpening{0}{1.7}{2 \SA}
+
+	\put(0,1.2){\HeaderfontBold{Besonderheiten bei Eröffnungen auf höherer Stufe}}
+
+	\TwoLines{0}{0}
+
+% rechte Seite
+
+	\put(14,0){
+
+		\put(0,19.1){\HeaderfontBold{Gegenreizung gegen natürliche Farberöffnung}}
+
+		\put(0,18.5){\Fieldfont{Informationskontra}}
+			\put(3.5,18.5){\Fieldfont{ab}}\put(4.2,18.4){\RectBox{1}{.5}}
+			\put(5.7,18.5){\Fieldfont{verspricht Oberfarben}}\put(8.9,18.4){\SquareBox{.5}}
+			\put(9.8,18.5){\Fieldfont{zeigt nur Werte}}\put(12,18.4){\SquareBox{.5}}
+
+		\put(0,17.9){\Fieldfont{Farbgegenreizung auf 1er-Stufe mit}}
+			\put(6,17.8){\RectBox{1}{.5}}
+			\put(7.2,17.9){\Fieldfont{bis}}
+			\put(8,17.8){\RectBox{1}{.5}}
+			\put(9.2,17.9){\Fieldfont{Punkten}}
+
+		\put(0,17.3){\Fieldfont{Farbgegenreizung auf 2er-Stufe mit}}
+			\put(6,17.2){\RectBox{1}{.5}}
+			\put(7.2,17.3){\Fieldfont{bis}}
+			\put(8,17.2){\RectBox{1}{.5}}
+			\put(9.2,17.3){\Fieldfont{Punkten}}
+
+		\put(0,16.7){\Fieldfont{Stil der Gegenreizung}}\put(4,16.6){\RectBox{9}{.5}}
+
+		\put(0,16.1){\Fieldfont{Weiterreizung}}\put(4,16){\RectBox{9}{.5}}
+
+		\put(0,15.5){\Fieldfont{1\SA-Gegenreizung, Punktspanne in}}
+			\put(6,15.5){\Fieldfont{2. Hand}}\put(7.2,15.4){\RectBox{2}{.5}}
+			\put(9.8,15.5){\Fieldfont{4. Hand}}\put(11,15.4){\RectBox{2}{.5}}
+
+		\OneLine{0}{14.8}
+
+		\put(0,14.3){\Fieldfont{Sprunggegenreizung}}\put(4,14.2){\RectBox{9}{.5}}
+
+		\OneLine{0}{13.6}
+
+		\put(0,13.1){\HeaderfontBold{Gegenreizung gegen 1\SA-Eröffnung}}
+		\ThreeLines{0}{11.5}
+
+		\put(0,11){\HeaderfontBold{andere Gegenreizungen}\ \ \Fieldfont{(z.B. gegen starke \treff\ oder Sperransagen)}}
+		\ThreeLines{0}{9.4}
+
+		\put(0,8.9){\HeaderfontBold{Ausspiele gegen Farbkontrakte\ \ }\Fieldfont{(Änderungen ankreuzen bzw. ergänzen)}}
+		\put(.5,8.2){\SquareBox{.5}}\put(1.2,8.3){\Fieldfont{Höchste der Sequenz: {\bfseries\large A}K53, {\bfseries\large K}DB7, {\bfseries\large D}B984, {\bfseries\large 10}986}}\put(10,8.2){\RectBox{3}{.5}}
+		\put(.5,7.6){\SquareBox{.5}}\put(1.2,7.7){\Fieldfont{Zweithöchste der Sequenz: A{\bfseries\large K}D6, K{\bfseries\large D}106, D{\bfseries\large B}986}}\put(10,7.6){\RectBox{3}{.5}}
+		\put(.5,7){\SquareBox{.5}}\put(1.2,7.1){\Fieldfont{Höchste der inneren Sequenz: K{\bfseries\large B}109, D{\bfseries\large 10}97}}\put(10,7){\RectBox{3}{.5}}
+		\put(.5,6.4){\SquareBox{.5}}\put(1.2,6.5){\Fieldfont{Zweithöchste der inneren Sequenz: KB{\bfseries\large 10}7, D10{\bfseries\large 9}63}}\put(10,6.4){\RectBox{3}{.5}}
+
+		\put(.5,5.8){\Fieldfont{3./5.}}\put(1.5,5.7){\SquareBox{.5}}
+		\put(2.5,5.8){\Fieldfont{4.-höchste}}\put(4,5.7){\SquareBox{.5}}
+		\put(5,5.8){\Fieldfont{2./4.}}\put(6,5.7){\SquareBox{.5}}
+		\put(7,5.8){\Fieldfont{sonstiges}}\put(8.5,5.7){\RectBox{4.5}{.5}}
+
+		\put(0,5.2){\Fieldfont{Besonderheiten und Abweichungen bei \SA-Kontrakten}}
+		\TwoLines{0}{4.1}
+
+		\put(0,3.6){\HeaderfontBold{Markierungen gegen Farbkontrakte}}
+		\put(0,3.1){\Fieldfont{positive Karte}}
+			\put(3,3.1){\Fieldfont{hoch}}\put(4,3){\SquareBox{.5}}
+			\put(4.8,3.1){\Fieldfont{niedrig}}\put(6.1,3){\SquareBox{.5}}
+			\put(7.2,3.1){\Fieldfont{sonstiges}}\put(9,3){\RectBox{4}{.5}}
+
+		\put(0,2.2){\Fieldfont{gerade Länge}}
+			\put(3,2.2){\Fieldfont{hoch}}\put(4,2.1){\SquareBox{.5}}
+			\put(4.8,2.2){\Fieldfont{niedrig}}\put(6.1,2.1){\SquareBox{.5}}
+			\put(7.2,2.2){\Fieldfont{sonstiges}}\put(9,2.1){\RectBox{4}{.5}}
+
+		\put(0,1.6){\Fieldfont{Abwürfe}}\put(2,1.5){\RectBox{11}{.5}}
+
+		\put(0,1.1){\Fieldfont{Besonderheiten und Abweichungen bei \SA-Kontrakten}}
+		\TwoLines{0}{0}
+	}
+}
+\def\endMinikarteNeu{%
+\end{picture}
+}
+%    \end{macrocode}
