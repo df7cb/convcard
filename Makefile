@@ -6,7 +6,7 @@ PDF = $(patsubst %.tex,%.pdf,$(CC))
 
 #quick: cc_moscito05.dvi
 
-all: $(PS) $(PDF)
+all: $(PDF)
 ps: $(PS)
 pdf: $(PDF)
 
