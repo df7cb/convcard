@@ -1,3 +1,5 @@
+# Build-Depends: texlive-latex-base texlive-latex-extra lmodern texlive-latex-recommended texlive-binaries texlive-fonts-recommended texlive-lang-german
+
 DVIPSFLAGS=-t landscape
 
 CC = $(wildcard cc_*.tex)
