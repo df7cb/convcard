@@ -24,7 +24,8 @@ cc_moscito05.dvi: miniDBV2.sty defense.tex
 
 cc_kantner_berg.pdf: miniDBVzocker.sty
 
-%.pdf: %.tex %.dvi
+%.pdf: %.tex
+	pdflatex $<
 	pdflatex $<
 
 clean:
