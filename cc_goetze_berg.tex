@@ -7,7 +7,8 @@
 \usepackage{german}
 \usepackage[a4paper, landscape, left=0mm,top=5mm,bottom=5mm, right=10mm]{geometry}
 \usepackage{multicol,tabularx,rotating}
-\renewcommand{\familydefault}{cmss}
+%\renewcommand{\familydefault}{cmss}
+\usepackage{txfonts}
 \setlength{\columnsep}{8mm}
 
 \begin{document}
@@ -15,7 +16,7 @@
 \raggedcolumns
 
 \begin{tabularx}{\columnwidth}{|X|}
-\hline \multicolumn{1}{c}{\bf \large Gegenreizung und kompetitive Reizung} \\
+\hline \multicolumn{1}{|c|}{\bf \large Gegenreizung und kompetitive Reizung} \\
 \hline \bf Überrufe (Stil, Antworten, Reopening) \\
  aggressiv bis konstruktiv \\
 \\
@@ -64,39 +65,38 @@
 \hline \end{tabularx}
 
 \begin{tabularx}{\columnwidth}{|l|X|X|}
-\hline \multicolumn{3}{c}{\bf \large Ausspiele und Markierung} \\
+\hline \multicolumn{3}{|c|}{\bf \large Ausspiele und Markierung} \\
 
-\hline \multicolumn{3}{c}{\bf Ausspiele (grundsätzlich)} \\
+\hline \multicolumn{3}{|c|}{\bf Ausspiele (grundsätzlich)} \\
 \hline           & {\bf Ausspiel} & {\bf In Partners Farbe} \\
 \hline Farbe     & 2./4. & 2./4. \\
 \hline SA        & 2./4. & 2./4. \\
 \hline Nachfolg. & Länge & Länge \\
-\hline \multicolumn{3}{|l|}{\bf Andere:} \\
-       \multicolumn{3}{|l|}{\underline{F}x, B10x\underline{x}, B\underline{9}xx} \\
+\hline Andere    & \multicolumn{2}{|l|}{} \\
 
-\hline \multicolumn{3}{c}{\bf Ausspiele} \\
+\hline \multicolumn{3}{|c|}{\bf Ausspiele} \\
 \hline {\bf Ausspiel} & {\bf Gegen Farbkontr.} & {\bf Gegen SA} \\
-\hline As       & & \\
-\hline König    & & \\
-\hline Dame     & & \\
-\hline Bube     & & \\
-\hline 10       & \underline{10}x & klein von 10x \\
-\hline 9        & & \\
-\hline Hoch-x   & ungerade Länge & ungerade Länge \\
-\hline Klein-x  & gerade Länge & gerade Länge \\
+\hline As       & \multicolumn{2}{l|}{Ax(+), AH(+), AKQ(+)} \\
+\hline König    & \multicolumn{2}{l|}{Kx(+), KH(+), KQJ(+) } \\
+\hline Dame     & \multicolumn{2}{l|}{(A)Qx, (A)QJx(+), (A)QJT(+)} \\
+\hline Bube     & \multicolumn{2}{l|}{Jx, (K)JT(+), (A)JT(+)} \\
+\hline 10       & HT9(+), HTx & HT9(+), HTx, Tx \\
+\hline 9        & J9x(+), T9x(+) & J9x(+), T9x(+) \\
+\hline Hoch-x   & xS(+), HSx & xS(+), HSx, TSx \\
+\hline Klein-x  & HxxS(+), xS & HxxS(+), xS, TS \\
 \hline \end{tabularx}
 
 \begin{tabularx}{\columnwidth}{|l|X|X|X|}
- \multicolumn{4}{c}{\bf Reihenfolge der Markierung} \\
+ \multicolumn{4}{|c|}{\bf Reihenfolge der Markierung} \\
 \hline                & {\bf Partner} & {\bf Gegner} & {\bf Abwurf} \\
-\hline \bf Farbe \hfill 1. & Attitude  & Länge     & Lavinthal \\
-\hline \bf       \hfill 2. & Länge     & Lavinthal & \\
-\hline \bf       \hfill 3. & Lavinthal &           & \\
-\hline \bf SA    \hfill 1. & Attitude  & Länge     & Lavinthal \\
-\hline \bf       \hfill 2. & Länge     & Lavinthal & \\
-\hline \bf       \hfill 3. & Lavinthal &           & \\
+\hline \bf Farbe \hfill 1. & Lo = Pos  & Lo = Even & SP \\
+\hline \bf       \hfill 2. & Lo = Even & SP        & \\
+\hline \bf       \hfill 3. & SP        &           & \\
+\hline \bf SA    \hfill 1. & Lo = Pos  & Lo = Even & SP \\
+\hline \bf       \hfill 2. & Lo = Even & SP        & \\
+\hline \bf       \hfill 3. & SP        &           & \\
 \hline \multicolumn{4}{|l|}{\bf Markierungen (inklusive Trumpffarbe):} \\
-       \multicolumn{4}{|l|}{niedrig-hoch} \\
+       \multicolumn{4}{|l|}{} \\
        \multicolumn{4}{|l|}{} \\
 \hline
 \end{tabularx}
@@ -184,25 +184,31 @@
  \bf Antworten &
  \bf Weiterreizung &
  \bf Änderungen als gepasste Hand \\
-\hline 1♣   & &3   & & & Weak Jumps & & \\
-\hline 1♦   & &3   & & & dto & & \\
-\hline 1♥   & &5   & & & Bergen, Splinter, dto & & \\
-\hline 1♠   & &5   & & & dto & 1♠-1SA-3♥ ist F & \\
-\hline 1 SA & &    & & & & & \\
-\hline 2♣   & &    & & PF, SF, SA 22+ & 2♦ neg & & \\
-\hline 2♦   &X&0   & & Zweifärber mit einer OF & & & \\
-\hline 2♥   & &6   & & ♥-Weak Two & & & \\
-\hline 2♠   & &6   & & ♠-Weak Two & & & \\
-\hline 2 SA & &    & & 20-21 & Puppet-Stayman & & \\
-\hline 3♣   & &7   & & & & & \\
-\hline 3♦   & &7   & & & & & \\
-\hline 3♥   & &7   & & & & & \\
-\hline 3♠   & &7   & & & & & \\
-\hline 3 SA &X&7   & & Gambling & & \multicolumn{2}{l|}{\bf Gebote auf hoher Stufe (inkl. Schlemmreizung)} \\
-\hline 4♣   & &8   & & & & \multicolumn{2}{l|}{RKCB 1430} \\
-\hline 4♦   & &8   & & & & \multicolumn{2}{l|}{} \\
-\hline 4♥   & &8(7)& & & & \multicolumn{2}{l|}{} \\
-\hline 4♠   & &8(7)& & & & \multicolumn{2}{l|}{} \\
+\hline 1♣  & &3& & 11-21 nat & 2♦/♥/♠ 6er-Länge, 4-8 Pkt. & & \\
+\hline 1♦  & &3& & 11-21 nat, 4+ Karo oder 4432 & 2♥/♠ 6er-Länge, 4-8 Pkt. & & \\
+\hline 1♥  & &5& & 11-21 nat & 2♠ 6er-Länge, 4-8 Pkt., 2SA 4er-Anschluss PF,  & Auf 2SA: 3er Stufe Kürze, 4er Stufe Länge& \\
+\hline     & & & & & 3♣ 4er-Anschluss 7-9 Pkt, 3♦ 4er-Anschluss 10-11 Pkt, & & \\
+\hline     & & & & & 3♥ 4er-Anschluss 0-6 Pkt. & & \\
+\hline 1♠  & &5& & 11-21 nat & 2SA 4er-Anschluss PF, 3♣ 4er-Anschluss 7-9 Pkt, & Auf 2SA: 3er Stufe Kürze, 4er Stufe Länge& \\
+\hline     & & & & & 3♦ 4er-Anschluss 10-11 Pkt, 3♠ 4er-Anschluss 0-6 Pkt. & & \\
+\hline 1SA & & & & 15-17 ausgeglichen, & 2♣ Stayman (auch ohne 4er OF), 2♦ C\oe{}ur, 2♥ Pik,& & \\
+\hline     & & & & auch mit 5er OF & 2♠ Treff, 2SA Karo, 3♣ 4441, 3♦ 4414, & & \\
+\hline     & & & & & 3♥ 31(45), 3♠ 13(45) & & \\
+\hline 2♣  & &0& & PF oder (semi)ausgeglichen 22-24 & 2♦ relay & & \\
+\hline 2♦  &X&0& & Zweifärber (5-5 oder länger) & 2♥/♠ p/c, 2SA PF relay, 3♦ einl. in OF & Auf 2SA: 3♣ OF+Treff (3♦ relay), 3♦ & In Systemkat. C: W2 Karo\\
+\hline     & & & & mit mind. einer OF & 3♥ p/c, 4♣ fragt OF in TRF, 4♦ fragt OF & Karo+C\oe{}ur, 3♥ OFen, 3♠ Pik+Karo & \\
+\hline 2♥  & &5& & Weak Two in C\oe{}ur & RONF, 2SA Relay & Auf 2SA min/min/max/max & \\
+\hline 2♠  & &5& & Weak Two in Pik & RONF, 2SA Relay & Auf 2SA min/min/max/max & \\
+\hline 2SA & & & & 20-21 (semi)ausgeglichen & 3♣ Puppet-Stayman & & \\
+\hline 3♣  & &6& & Sperrgebot & & & \\
+\hline 3♦  & &6& & Sperrgebot & & & \\
+\hline 3♥  & &6& & Sperrgebot & & & \\
+\hline 3♠  & &6& & Sperrgebot & & & \\
+\hline 3SA &X& & & Stehende UF & 4♣ p/c, 4♦ fragt Single & \multicolumn{2}{l|}{\bf Gebote auf hoher Stufe (inkl. Schlemmreizung)} \\
+\hline 4♣  & &7& & Sperrgebot & & \multicolumn{2}{l|}{Splinter, RKCB 1430} \\
+\hline 4♦  & &7& & Sperrgebot & & \multicolumn{2}{l|}{} \\
+\hline 4♥  & &6& & Sperrgebot & & \multicolumn{2}{l|}{} \\
+\hline 4♠  & &6& & Sperrgebot & & \multicolumn{2}{l|}{} \\
 \hline \end{tabularx}
 
 \end{document}
